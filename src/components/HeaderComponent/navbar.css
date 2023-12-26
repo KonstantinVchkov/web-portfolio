@@ -1,0 +1,25 @@
+.navigation{
+    border: 1px solid #00cdac;
+    border-radius: 100px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navigation ul li {
+    cursor: pointer;
+    color: #000080;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.navigation ul li:hover{
+    background-color: #000080;
+    border-radius: 18px;
+    color: whitesmoke;
+}
