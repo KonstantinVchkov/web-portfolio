@@ -1,7 +1,10 @@
-import { Parallax, useParallax } from "react-scroll-parallax";
 import "./about.css";
-
-const About = () => {
+interface AboutMe {
+  name?: string;
+  lastname?: string;
+  aboutme: string;
+}
+const About = ({ name, lastname, aboutme }: AboutMe) => {
   return (
     <div id="about">
       <div className="container d-flex justify-content-center align-center flex-column">
@@ -20,18 +23,16 @@ const About = () => {
           </div>
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info load-hidden">
-              <p className="about-wrapper__info-text">
-                    
-              </p>
-              <p className="about-wrapper__info-text">
-             
-              </p>
+              <h1>
+                {name} {lastname}
+              </h1>
+              <p className="about-wrapper__info-text">{aboutme}</p>
               <span className="d-flex mt-3">
                 <a
                   rel="noreferrer"
                   target="_blank"
                   className="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
+                  href={"/assets/KonstantinVchkov_CV.pdf"}
                 >
                   View Resume
                 </a>
