@@ -1,19 +1,20 @@
 import { IProject } from "../../types/ProjectTypes";
 
-const Projects = ({ title, paragraph, handleClick,image }: IProject) => {
+const ProjectCard = ({ name,showLive,linkcode,description,tech,image }: IProject) => {
   return (
     <>
-      <div className="col-lg-4 col-sm-12">
+      <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
-          <h3 className="project-wrapper__text-title">{title}</h3>
+          <h3 className="project-wrapper__text-title">{name}</h3>
           <div>
-            <p className="mb-4">{paragraph}</p>
+            <p className="my-4">{description}</p>
+            {tech.map((techstack) => <p className="my-4">{techstack}</p>)}
           </div>
           <a
             rel="noreferrer"
             target="_blank"
             className="cta-btn cta-btn--hero"
-            href="#!"
+            href={showLive}
           >
             See Live
           </a>
@@ -21,7 +22,7 @@ const Projects = ({ title, paragraph, handleClick,image }: IProject) => {
             rel="noreferrer"
             target="_blank"
             className="cta-btn text-color-main"
-            href="#!"
+            href={linkcode}
           >
             Source Code
           </a>
@@ -46,4 +47,4 @@ const Projects = ({ title, paragraph, handleClick,image }: IProject) => {
   );
 };
 
-export default Projects;
+export default ProjectCard;

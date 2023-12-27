@@ -1,0 +1,94 @@
+.projects {
+    background-color: white; /* Assuming $white-color is white */
+    color: darkblue; /* Assuming $dark-blue-text is dark blue */
+    margin-top: -10rem;
+    padding-top: 15rem;
+  }
+  
+  @media only screen and (max-width: 900px) { /* tab-land breakpoint */
+    .projects {
+      margin-top: 0;
+      padding-top: 5rem;
+    }
+  }
+  
+  .project-wrapper {
+    margin-bottom: 15rem;
+  }
+  
+  @media only screen and (max-width: 600px) { /* phone breakpoint */
+    .project-wrapper {
+      margin-bottom: 0rem;
+    }
+  }
+  
+  .project-wrapper .row {
+    margin-bottom: 8rem;
+  }
+  
+  @media only screen and (max-width: 600px) { /* phone breakpoint */
+    .project-wrapper .row {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  .project-wrapper__text {
+    text-align: left;
+  }
+  
+  @media only screen and (max-width: 600px) { /* phone breakpoint */
+    .project-wrapper__text {
+      margin-bottom: 2.5rem !important;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) { /* tab-land breakpoint */
+    .project-wrapper__text {
+      margin-bottom: 4.8rem;
+    }
+  }
+  
+  .project-wrapper__text-title {
+    font-weight: bold;
+    margin-bottom: 1.8rem;
+    font-size: 1.6rem; /* Assuming $mid-font-size is 1.6rem */
+  }
+  
+  @media only screen and (max-width: 600px) { /* phone breakpoint */
+    .project-wrapper__text-title {
+      font-size: 2rem;
+    }
+  }
+  
+  .project-wrapper__text p > a {
+    color: blue; /* Assuming $secondary-color is blue */
+  }
+  
+  .project-wrapper__image {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 900px) { /* tab-land breakpoint */
+    .project-wrapper__image {
+      width: 100%;
+      margin: 0;
+    }
+  }
+  
+  .project-wrapper__image .thumbnail {
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.2s ease-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+    transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow;
+  }
+  
+  @media only screen and (max-width: 600px) { /* phone breakpoint */
+    .project-wrapper__image .thumbnail {
+      border: 1px solid lightgrey; /* Assuming $light-grey is lightgrey */
+      box-shadow: none;
+      margin-bottom: 3.2rem;
+    }
+  }
+  

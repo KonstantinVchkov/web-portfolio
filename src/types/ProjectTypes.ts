@@ -1,6 +1,9 @@
 export interface IProject {
-    title: string;
-    paragraph: string;
-    handleClick: () => void;
-    image: string;
-  }
+  name?: string;
+  tech: string[];
+  description: string;
+  handleClick?: () => void;
+  linkcode?: string;
+  showLive?: string;
+  image: string;
+}
