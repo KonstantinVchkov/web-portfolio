@@ -1,25 +1,34 @@
-.navigation{
-    border: 1px solid #00cdac;
-    border-radius: 100px;
-    width: 80%;
-    margin: 10px auto;
+.navigation {
+  border: 1px solid #00cdac;
+  border-radius: 100px;
+  width: 80%;
+  margin: 10px auto;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 195, 82, 1) 0%,
+    rgba(37, 195, 189, 1) 25%,
+    rgba(0, 205, 172, 1) 88%
+  );
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
 }
 
 .navigation ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navigation ul li {
-    cursor: pointer;
-    color: #000080;
-    font-weight: 700;
-    padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
 }
 
-.navigation ul li:hover{
-    background-color: #000080;
-    border-radius: 18px;
-    color: whitesmoke;
+.navigation ul li:hover {
+  border-radius: 18px;
+  color: wheat;
+  border-bottom: 1px solid wheat;
 }

@@ -1,7 +1,14 @@
 .App {
   text-align: center;
 }
-
+.progress-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: #61dafb;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
