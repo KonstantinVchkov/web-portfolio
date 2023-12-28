@@ -1,6 +1,13 @@
 import { IProject } from "../../types/ProjectTypes";
-
-const ProjectCard = ({ name,showLive,linkcode,description,tech,image }: IProject) => {
+import "./style.css";
+const ProjectCard = ({
+  name,
+  showLive,
+  linkcode,
+  description,
+  tech,
+  image,
+}: IProject) => {
   return (
     <>
       <div className="col-lg-4 my-4 col-sm-12">
@@ -8,7 +15,9 @@ const ProjectCard = ({ name,showLive,linkcode,description,tech,image }: IProject
           <h3 className="project-wrapper__text-title">{name}</h3>
           <div>
             <p className="my-4">{description}</p>
-            {tech.map((techstack) => <p className="my-4">{techstack}</p>)}
+            {tech.map((techstack) => (
+              <p className="my-4">{techstack}</p>
+            ))}
           </div>
           <a
             rel="noreferrer"

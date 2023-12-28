@@ -6,6 +6,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { aboutMe, projectsData, skills } from "./data/db";
 import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/Projects";
+
 function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -20,9 +21,16 @@ function App() {
       <Navbar />
       <Home />
       <About aboutme={aboutMe.aboutme} />
-      {projectsData.map((project, idx) => ( // Swap the order here
-        <ProjectCard key={idx} {...project} /> // Add a key for better performance
-      ))}
+      <div className="projects">
+        {projectsData.map(
+          (
+            project,
+            idx 
+          ) => (
+            <ProjectCard key={idx} {...project} /> 
+          )
+        )}
+      </div>
       <Skills skills={skills} />
     </div>
   );

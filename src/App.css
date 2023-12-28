@@ -46,7 +46,13 @@ p {
   text-decoration: none;
   list-style-type: none;
 }
-
+.projects{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 10px auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

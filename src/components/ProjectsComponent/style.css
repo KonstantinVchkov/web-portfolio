@@ -1,8 +1,12 @@
-.projects {
-    background-color: white; /* Assuming $white-color is white */
-    color: darkblue; /* Assuming $dark-blue-text is dark blue */
+.project-wrapper {
+    background-color: white; 
+    color: darkblue; 
     margin-top: -10rem;
     padding-top: 15rem;
+  }
+  .thumbnail img {
+    width: 500px;
+    height: 400px;
   }
   
   @media only screen and (max-width: 900px) { /* tab-land breakpoint */
