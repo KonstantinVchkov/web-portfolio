@@ -1,4 +1,4 @@
-.navigation {
+/* .navigation {
   border: 1px solid #00cdac;
   border-radius: 100px;
   width: 80%;
@@ -31,4 +31,40 @@
   border-radius: 18px;
   color: wheat;
   border-bottom: 1px solid wheat;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+}
+.navigation {
+  width: 20%;
+  text-align: left;
+  position: fixed;
+  z-index: 10000;
+}
+.navigation ul {
+  font-size: 25px;
+  line-height: 5;
+  border-radius: 10px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+}
+.themeChange {
+  position: fixed;
+  right: 0;
+  top: 10px;
 }

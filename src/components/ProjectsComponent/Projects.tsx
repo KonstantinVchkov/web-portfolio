@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { IProject } from "../../types/ProjectTypes";
 import "./style.css";
+import { motion, useScroll, useTransform } from "framer-motion";
 const ProjectCard = ({
   name,
   showLive,
@@ -8,17 +10,23 @@ const ProjectCard = ({
   tech,
   image,
 }: IProject) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const {scrollYProgress} = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+ const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5,1])
   return (
-    <>
+    <motion.div
+    style={{
+      scale: scaleProgress,
+      opacity:scrollYProgress
+    }}
+    ref={ref} id="projects" className="project-card">
       <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
           <h3 className="project-wrapper__text-title">{name}</h3>
-          <div>
-            <p className="my-4">{description}</p>
-            {tech.map((techstack) => (
-              <p className="my-4">{techstack}</p>
-            ))}
-          </div>
+          <p className="my-4">{description}</p>
           <a
             rel="noreferrer"
             target="_blank"
@@ -30,7 +38,7 @@ const ProjectCard = ({
           <a
             rel="noreferrer"
             target="_blank"
-            className="cta-btn text-color-main"
+            className="cta-btn view-code cta-btn--hero"
             href={linkcode}
           >
             Source Code
@@ -52,7 +60,13 @@ const ProjectCard = ({
           </a>
         </div>
       </div>
-    </>
+      <h2>Tech Stack Used:</h2>
+      <div className="tech-stacks">
+        {tech.map((techstack) => (
+          <span className="tech my-4">{techstack}</span>
+        ))}
+      </div>
+    </motion.div>
   );
 };
 

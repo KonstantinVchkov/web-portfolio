@@ -17,7 +17,7 @@ const About = ({ name, lastname, aboutme }: AboutMe) => {
                 className="img-fluid rounded shadow-lg"
                 height="auto"
                 width="300px"
-                src="/assets/self-image.jpg"
+                src="/assets/self-image.png"
               />
             </div>
           </div>

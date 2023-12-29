@@ -1,8 +1,9 @@
 import './style.css'
 import '../styles/buttonStyle.css'
+
 const Home = () => {
   return (
-    <section id="hero" className="jumbotron">
+    <section  id="hero" className="jumbotron">
       <div className="container">
         <h1 className="hero-title load-hidden">
           Hi, my name is <span className="text-color-main">Konstantin</span>
