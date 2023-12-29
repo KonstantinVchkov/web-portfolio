@@ -1,13 +1,19 @@
-interface ISkills{
-  skills:string[]
+import "./style.css";
+interface ISkills {
+  skills: string[];
 }
-const Skills = ({skills}:ISkills) => {
+const Skills = ({ skills }: ISkills) => {
   return (
-    <div>
-        <h2>Tech Stacks:</h2>
-        {skills.map((skill,idx) => <p key={idx}>{skill}</p>)}
-    </div>
-  )
-}
+    <>
+      <h2>Skills</h2>
 
-export default Skills
+      <div id="skills">
+        {skills.map((skill, idx) => (
+          <p key={idx}>{skill}</p>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Skills;
