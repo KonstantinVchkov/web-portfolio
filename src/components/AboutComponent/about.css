@@ -1,21 +1,16 @@
 #about {
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    radial-gradient(
-        at top center,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(0, 0, 0, 0.4) 120%
-      )
-      #989898;
-  color: #ffffff;
+  background-color: rgb(226 232 240);
+  /* color: #ffffff; */
   height: 100%;
   border-top: 0px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
+}
+#about h2 {
+  color: #000080;
+  font-weight: 700;
+  line-height: 2;
 }
 
 /* Responsive styles for tab-land */
@@ -28,8 +23,6 @@
 }
 
 .about-wrapper {
-  /* Styles for phone */
-  padding-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +72,7 @@
 .about-wrapper__info-text {
   text-align: center;
   font-size: 17px;
+  color: #999999;
 }
 
 /* Responsive styles for tab-port */

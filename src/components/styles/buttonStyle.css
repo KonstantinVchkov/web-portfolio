@@ -61,10 +61,10 @@
   width: 100%;
 }
 
-.cta-btn--resume {
+/* .cta-btn--resume {
   color: white;
   border: 2px solid white;
-}
+} */
 
 .cta-btn--resume::after {
   background: white;
