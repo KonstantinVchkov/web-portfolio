@@ -7,9 +7,11 @@ const Skills = ({ skills }: ISkills) => {
     <>
       <h2>Skills</h2>
       <div id="skills">
-        {skills.map((skill, idx) => (
-          <p key={idx}>{skill}</p>
-        ))}
+        <div className="secondDiv">
+          {skills.map((skill, idx) => (
+            <p key={idx}>{skill}</p>
+          ))}
+        </div>
       </div>
     </>
   );

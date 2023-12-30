@@ -62,8 +62,8 @@ const ProjectCard = ({
       </div>
       <h2>Tech Stack Used:</h2>
       <div className="tech-stacks">
-        {tech.map((techstack) => (
-          <span className="tech my-4">{techstack}</span>
+        {tech.map((techstack,idx) => (
+          <span key={idx} className="tech my-4">{techstack}</span>
         ))}
       </div>
     </motion.div>

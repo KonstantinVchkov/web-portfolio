@@ -34,17 +34,18 @@
 } */
 
 .header {
-  display: flex;
-  justify-content: space-between;
+   display: flex;
+  /* justify-content: space-between; */
   align-items: center;
-  position: fixed;
+  position: fixed; 
   z-index: 10000;
-  width: 100%;
+  width: 80%;
+  margin: 10px auto;
 }
 .navigation {
   width: 20%;
   text-align: left;
-  position: fixed;
+  /* position: fixed; */
   z-index: 10000;
 }
 .navigation ul {
@@ -63,6 +64,10 @@
       )
       #989898;
 }
+/* .header{
+  width: 80%;
+margin: 10px auto;
+} */
 .themeChange {
   position: fixed;
   right: 0;

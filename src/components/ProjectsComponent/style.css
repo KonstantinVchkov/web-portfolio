@@ -26,10 +26,13 @@
 }
 .tech-stacks {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px auto;
+  align-items: center;
+  justify-content: center;
 }
 .tech {
-  margin-right: 10px;
+  margin: 10px 10px;
   border: 1px solid rgb(178, 180, 149);
   border-radius: 15px;
   padding: 10px 5px;
@@ -48,6 +51,9 @@
 
 @media only screen and (max-width: 600px) {
   /* phone breakpoint */
+  .tech {
+    width: 40%;
+  }
   .project-wrapper {
     margin-bottom: 0rem;
   }

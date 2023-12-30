@@ -12,7 +12,7 @@ export const Navbar = () => {
   useClickAway(ref, () => setOpen(false));
 
   return (
-    <>
+    <div className="header">
       <div ref={ref} className="lg:hidden navigation">
         <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
         <AnimatePresence>
@@ -62,6 +62,6 @@ export const Navbar = () => {
         </AnimatePresence>
       </div>
       <div className="themeChange">Change Theme</div>
-    </>
+    </div>
   );
 };

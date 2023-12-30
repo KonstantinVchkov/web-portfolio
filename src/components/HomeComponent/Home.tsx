@@ -1,14 +1,19 @@
-import './style.css'
-import '../styles/buttonStyle.css'
+import "./style.css";
+import "../styles/buttonStyle.css";
+import { useTypewriter,Typewriter } from 'react-simple-typewriter'
+
+// import Typewriter from "typewriter-effect";
 
 const Home = () => {
+  const sentences = ["Front-End Developer", "React Developer",'Next js Developer'];
+
   return (
-    <section  id="hero" className="jumbotron">
+    <section id="hero" className="jumbotron">
       <div className="container">
         <h1 className="hero-title load-hidden">
-          Hi, my name is <span className="text-color-main">Konstantin</span>
+          Hi There, I'm <span className="text-color-main">Konstantin Vchkov</span>
           <br />
-          I'm a Front End Developer.
+          <Typewriter loop={true} cursor words={sentences} />
         </h1>
         <p className="hero-cta load-hidden">
           <a rel="noreferrer" className="cta-btn cta-btn--hero" href="#about">
