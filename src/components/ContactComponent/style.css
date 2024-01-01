@@ -1,0 +1,33 @@
+.ContactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+form input,
+textarea {
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  margin: 5px auto;
+  width: 250px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.name,
+.email {
+  height: 25px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.area{
+    height: 200px;
+}
