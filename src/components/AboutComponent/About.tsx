@@ -1,12 +1,19 @@
 import "./about.css";
+import { useThemeContext } from "../../context/ThemeContext";
 interface AboutMe {
   name?: string;
   lastname?: string;
   aboutme: string;
 }
 const About = ({ name, lastname, aboutme }: AboutMe) => {
+  const { theme } = useThemeContext();
+  const aboutBgTheme =
+    theme === "light"
+      ? "rgb(226 232 240)"
+      : "linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%)";
+
   return (
-    <div id="about">
+    <div id="about" style={{ background: aboutBgTheme }}>
       <div className="container d-flex justify-content-center align-center flex-column">
         <h2 className="section-title load-hidden">About me</h2>
         <div className="row about-wrapper">

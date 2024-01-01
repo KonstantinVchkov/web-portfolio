@@ -1,10 +1,11 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
 import "./style.css";
+
 // const LottieAnimation = dynamic(() => import("./LottieAnimation"), {
 //   ssr: false,
 // });
-import AnimationJson from "./lottie-web/contact-form.json";
+import AnimationJson from "./lottie-web/mail-animation.json";
 import LottieAnimation from "./LottieAnimation";
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
@@ -35,7 +36,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="ContactForm">
+    <div id="contact" className="ContactForm">
       <div className="Animation">
         <LottieAnimation animationData={AnimationJson} />
       </div>
@@ -58,15 +59,9 @@ export const ContactUs = () => {
           />
           <label>Message</label>
           <textarea placeholder="Message..." className="area" name="message" />
-          <input type="submit" value="Send" />
+          <input className="form-submit" type="submit" value="Send" />
         </form>
       </div>
     </div>
   );
 };
-function dynamic(
-  arg0: () => Promise<typeof import("./LottieAnimation")>,
-  arg1: { ssr: boolean }
-) {
-  throw new Error("Function not implemented.");
-}

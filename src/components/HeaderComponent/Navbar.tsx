@@ -1,19 +1,29 @@
-import { useClickAway } from "react-use";
 import { useRef } from "react";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Squash as Hamburger } from "hamburger-react";
 import { routes } from "../../data/routes";
 import "./navbar.css";
+import ToggleThemeButton from "../ThemeButton/ToggleThemeButton";
+import { useThemeContext } from "../../context/ThemeContext";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const Navbar = () => {
+  //
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
-
-  useClickAway(ref, () => setOpen(false));
-
+  const { theme } = useThemeContext();
+  const changeCn = theme === "light" ? "navigation" : "darknavigation";
   return (
     <div className="header">
-      <div className="navigation">
+      <div className="social-media">
+        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faLinkedin} />
+        <FontAwesomeIcon icon={faFacebook} />
+      </div>
+      <div className={changeCn}>
         <ul>
           {routes.map((nav, idx) => {
             return (
@@ -24,7 +34,9 @@ export const Navbar = () => {
           })}
         </ul>
       </div>
-      <div className="themeChange">Change Theme</div>
+      <div className="themeChange">
+        <ToggleThemeButton />
+      </div>
     </div>
   );
 };

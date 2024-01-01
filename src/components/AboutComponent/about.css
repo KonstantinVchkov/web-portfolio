@@ -1,6 +1,4 @@
 #about {
-  background-color: rgb(226 232 240);
-  /* color: #ffffff; */
   height: 100%;
   border-top: 0px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);

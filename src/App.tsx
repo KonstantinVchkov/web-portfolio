@@ -6,20 +6,23 @@ import { aboutMe, projectsData, skills } from "./data/db";
 import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/Projects";
 import { ContactUs } from "./components/ContactComponent/Contact";
+import ThemeProvider from "./Hoc/ThemeProvider";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <About aboutme={aboutMe.aboutme} />
-      <div className="projects">
-        {projectsData.map((project, idx) => (
-          <ProjectCard key={idx} {...project} />
-        ))}
-      </div>
-      <Skills skills={skills} />
-      <ContactUs />
+      <ThemeProvider>
+        <Navbar />
+        <Home />
+        <About aboutme={aboutMe.aboutme} />
+        <div className="projects">
+          {projectsData.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
+        </div>
+        <Skills skills={skills} />
+        <ContactUs />
+      </ThemeProvider>
     </div>
   );
 }
