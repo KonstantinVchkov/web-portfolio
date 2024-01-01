@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import emailjs from "@emailjs/browser";
-interface IForm {
-  hook: React.LegacyRef<HTMLFormElement> | undefined;
-}
+
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
 
