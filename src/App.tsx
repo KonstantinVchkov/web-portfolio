@@ -7,8 +7,13 @@ import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/Projects";
 import { ContactUs } from "./components/ContactComponent/Contact";
 import ThemeProvider from "./Hoc/ThemeProvider";
+import { animateScroll as scroll } from "react-scroll";
+import ScrollButton from "./components/ScrollBtn/ScrollToTop";
 
 function App() {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <div className="App">
       <ThemeProvider>
@@ -21,6 +26,7 @@ function App() {
           ))}
         </div>
         <Skills skills={skills} />
+        <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
       </ThemeProvider>
     </div>

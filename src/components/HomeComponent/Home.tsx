@@ -1,6 +1,6 @@
 import "./style.css";
 import "../styles/buttonStyle.css";
-import { useTypewriter,Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter'
 
 // import Typewriter from "typewriter-effect";
 

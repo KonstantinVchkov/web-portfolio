@@ -18,9 +18,7 @@ export const Navbar = () => {
   const ref = useRef(null);
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+
   return (
     <div className="header">
       <div className="social-media">
@@ -37,7 +35,7 @@ export const Navbar = () => {
               smooth={true}
               duration={500}
               spy={true}
-              offset={-70} // Adjust this value based on your layout
+              offset={-70} 
             >
               <li>{nav.title}</li>
             </Link>
