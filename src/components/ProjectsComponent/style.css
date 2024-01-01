@@ -36,10 +36,11 @@
 }
 .tech {
   margin: 10px 10px;
-  border: 1px solid rgb(178, 180, 149);
+  /* border: 1px solid rgb(178, 180, 149); */
   border-radius: 15px;
   padding: 5px 10px;
-  color: #00cdac;
+  box-shadow: -1px 1px 12px -1px rgba(0, 0, 0, 0.54);
+  color: #999999;
 }
 @media only screen and (max-width: 900px) {
   /* tab-land breakpoint */

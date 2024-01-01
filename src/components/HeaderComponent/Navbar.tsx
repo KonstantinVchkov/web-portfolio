@@ -15,8 +15,12 @@ export const Navbar = () => {
     <div className="header">
       <div className="navigation">
         <ul>
-          {routes.map((nav,idx) => {
-           return <a href={nav.href}><li key={idx}>{nav.title}</li></a>
+          {routes.map((nav, idx) => {
+            return (
+              <a key={idx} href={nav.href}>
+                <li>{nav.title}</li>
+              </a>
+            );
           })}
         </ul>
       </div>

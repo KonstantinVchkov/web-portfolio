@@ -12,8 +12,9 @@
   font-weight: 700;
   line-height: 2;
 }
-
-/* Responsive styles for tab-land */
+.logo img{
+  width: 500px;
+}
 @media (max-width: 800px) {
   #about {
     height: 100%;
@@ -26,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 80%;
   margin: 0px auto;
 }
