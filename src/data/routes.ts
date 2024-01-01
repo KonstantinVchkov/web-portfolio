@@ -1,32 +1,22 @@
-import { BiHomeAlt2 } from "react-icons/bi";
-import { SiAboutdotme } from "react-icons/si"
-import { PiChatCircleBold } from "react-icons/pi";
-import { IoPricetagsOutline } from "react-icons/io5";
-
 export const routes = [
   {
     title: "Home",
-    href: "#hero",
-    Icon: BiHomeAlt2,
+    href: "hero",
   },
   {
     title: "About",
-    href: "#about",
-    Icon: SiAboutdotme,
+    href: "about",
   },
   {
     title: "Projects",
-    href: "#projects",
-    Icon: IoPricetagsOutline,
+    href: "projects",
   },
   {
     title: "Skills",
-    href: "#skills",
-    Icon: PiChatCircleBold,
+    href: "skills",
   },
   {
     title: "Contact",
-    href: "#contact",
-    Icon: PiChatCircleBold,
+    href: "contact",
   },
 ];

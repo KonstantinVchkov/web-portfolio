@@ -1,6 +1,5 @@
 .project-wrapper {
   background-color: white;
-  /* color: darkblue; */
   margin-top: -10rem;
   padding-top: 15rem;
 }
@@ -10,7 +9,6 @@
 }
 .project-card {
   border-radius: 10px;
-  /* color: black; */
   width: 500px;
   margin: 10px auto;
   display: flex;
@@ -18,7 +16,6 @@
   flex-direction: column;
   background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   box-shadow: 8px 3px 10px 0px rgba(0, 0, 0, 0.23);
-  /* font-weight: 700; */
   font-size: 17px;
   color: #999999;
 }
@@ -36,7 +33,6 @@
 }
 .tech {
   margin: 10px 10px;
-  /* border: 1px solid rgb(178, 180, 149); */
   border-radius: 15px;
   padding: 5px 10px;
   box-shadow: -1px 1px 12px -1px rgba(0, 0, 0, 0.54);
@@ -99,7 +95,7 @@
 
 .project-card h2,
 .project-wrapper__text-title {
-  color: #000080;
+  color: #00cdac;
   font-weight: 700;
   margin-bottom: 1.8rem;
   font-size: 1.6rem;

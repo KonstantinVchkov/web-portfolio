@@ -9,7 +9,7 @@
 }
 .navigation,.darknavigation {
   margin: 0px auto;
-  background:inherit;
+  background:radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
   box-shadow: -1px 1px 12px -1px rgba(0, 0, 0, 0.54);
   border-radius: 60px;
   font-weight: 600;
@@ -33,6 +33,8 @@
 }
 .darknavigation{
   box-shadow: -1px 1px 12px -1px rgb(147 144 144 / 87%);
+  
+  background: radial-gradient(circle at 10% 20%, rgb(21 21 21) 0%, rgb(64, 64, 64) 90.2%);
 }
 .darknavigation ul li{
   color: #999999;
