@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { useState } from "react";
+// import { useRef } from "react";
+// import { useState } from "react";
 import { routes } from "../../data/routes";
 import "./navbar.css";
 import ToggleThemeButton from "../ThemeButton/ToggleThemeButton";
@@ -10,12 +10,12 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   //
-  const [isOpen, setOpen] = useState(false);
-  const ref = useRef(null);
+  // const [isOpen, setOpen] = useState(false);
+  // const ref = useRef(null);
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
 
