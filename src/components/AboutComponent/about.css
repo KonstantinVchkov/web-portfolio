@@ -60,7 +60,9 @@
     padding-bottom: 6.4rem;
   }
 }
-
+.about-btn{
+  margin-top: 15px ;
+}
 .about-wrapper__info {
   display: flex;
   height: 100%;
@@ -87,6 +89,7 @@
 @media (max-width: 800px) {
   .about-wrapper__info-text {
     text-align: center;
+    width: 100%;
   }
 }
 

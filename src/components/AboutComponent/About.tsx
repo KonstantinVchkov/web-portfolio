@@ -27,7 +27,7 @@ const About = ({ name, lastname, aboutme }: AboutMe) => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  className="cta-btn cta-btn--hero"
+                  className="cta-btn about-btn cta-btn--hero"
                   href={"/assets/KonstantinVchkov_CV.pdf"}
                 >
                   View Resume

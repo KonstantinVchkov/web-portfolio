@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  /* background: white; */
   font-weight: 400;
   color: #999999;
   padding: 0rem 5.6rem;
@@ -49,7 +48,7 @@
 }
 
 /* Responsive styles for phone */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .hero-title {
     font-size: 2rem;
     line-height: 1.5;
@@ -81,6 +80,6 @@
 /* Responsive styles for phone */
 @media (max-width: 400px) {
   .hero-cta a {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
