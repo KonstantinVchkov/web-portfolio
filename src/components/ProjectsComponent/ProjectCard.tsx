@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { IProject } from "../../types/ProjectTypes";
 import "./style.css";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useThemeContext } from "../../context/ThemeContext";
 const ProjectCard = ({
   name,
   showLive,
@@ -16,13 +17,15 @@ const ProjectCard = ({
     offset: ["0 1", "1.33 1"],
   });
  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5,1])
+ const {theme} = useThemeContext()
+ const classes = theme === 'light' ? 'project-card' : 'project-card-dark'
   return (
     <motion.div
     style={{
       scale: scaleProgress,
       opacity:scrollYProgress
     }}
-    ref={ref} id="projects" className="project-card">
+    ref={ref} id="projects" className={classes}>
       <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
           <h3 className="project-wrapper__text-title">{name}</h3>

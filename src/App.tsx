@@ -4,7 +4,7 @@ import "./App.css";
 import About from "./components/AboutComponent/About";
 import { aboutMe, projectsData, skills } from "./data/db";
 import Skills from "./components/Skills/Skills";
-import ProjectCard from "./components/ProjectsComponent/Projects";
+import ProjectCard from "./components/ProjectsComponent/ProjectCard";
 import { ContactUs } from "./components/ContactComponent/Contact";
 import ThemeProvider from "./Hoc/ThemeProvider";
 import { animateScroll as scroll } from "react-scroll";
@@ -14,6 +14,7 @@ function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+  
   return (
     <div className="App">
       <ThemeProvider>
@@ -25,7 +26,7 @@ function App() {
             <ProjectCard key={idx} {...project} />
           ))}
         </div>
-        <Skills skills={skills} />
+        {/* <Skills skills={skills} /> */}
         <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
       </ThemeProvider>

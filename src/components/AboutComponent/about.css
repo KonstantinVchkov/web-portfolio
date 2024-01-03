@@ -19,6 +19,12 @@
     -webkit-clip-path: none;
     clip-path: none;
   }
+  .logo img{
+    width: 300px;
+  }
+  .about-wrapper__info-text{
+    width: 100%;
+  }
 }
 
 .about-wrapper {

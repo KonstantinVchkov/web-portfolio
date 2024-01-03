@@ -2,8 +2,8 @@
   position: fixed;
   z-index: 100000;
   font-size: 40px;
-  top: 50%;
-  right: 5%;
+  top: 60%;
+  right: 10%;
   border-radius: 20px;
   cursor: pointer;
   box-shadow: -1px 1px 12px -1px rgb(147 144 144 / 87%);

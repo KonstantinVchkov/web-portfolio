@@ -10,7 +10,7 @@ const About = ({ name, lastname, aboutme }: AboutMe) => {
   const aboutBgTheme =
     theme === "light"
       ? "rgb(226 232 240)"
-      : "linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%)";
+      : "radial-gradient(circle at 10% 20%, rgb(21, 21, 21) 0%, rgb(64, 64, 64) 90.2%)";
 
   return (
     <div id="about" style={{ background: aboutBgTheme }}>

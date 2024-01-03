@@ -64,3 +64,32 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+.social-media {
+  position: fixed;
+  bottom: 30%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+  font-size: 30px;
+}
+
+.social-media a {
+  margin-top: 5px;
+}
+
+.social-media a:hover {
+  color: #00cdac;
+}
+.call:hover {
+  color: #00cdac;
+}
+.line {
+  border: 1px solid #00cdac;
+  width: 1px;
+  background-color: #00cdac;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  height: 500px;
+}

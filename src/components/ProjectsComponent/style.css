@@ -7,7 +7,8 @@
   margin-left: 3px;
   cursor: pointer;
 }
-.project-card {
+.project-card,
+.project-card-dark {
   border-radius: 10px;
   width: 500px;
   margin: 10px auto;
@@ -94,6 +95,7 @@
 }
 
 .project-card h2,
+.project-card-dark h2,
 .project-wrapper__text-title {
   color: #00cdac;
   font-weight: 700;
@@ -137,8 +139,24 @@
 @media only screen and (max-width: 600px) {
   /* phone breakpoint */
   .project-wrapper__image .thumbnail {
-    border: 1px solid lightgrey; /* Assuming $light-grey is lightgrey */
+    border: 1px solid lightgrey;
     box-shadow: none;
     margin-bottom: 3.2rem;
+  }
+}
+/* Dark Navigation project cards */
+
+.project-card-dark {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(97 97 97) 0%,
+    rgb(76 76 76) 90.2%
+  );
+  box-shadow: -1px 1px 12px -1px rgb(147 144 144 / 87%);
+}
+
+@media (max-width:650px) {
+  .project-card{
+    width: 350px;
   }
 }
