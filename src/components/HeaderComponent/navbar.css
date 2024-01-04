@@ -40,7 +40,6 @@
 }
 .darknavigation {
   box-shadow: -1px 1px 12px -1px rgb(147 144 144 / 87%);
-
   background: radial-gradient(
     circle at 10% 20%,
     rgb(21 21 21) 0%,
@@ -76,10 +75,14 @@
 
 .social-media a {
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .social-media a:hover {
   color: #00cdac;
+}
+.call {
+  cursor: pointer;
 }
 .call:hover {
   color: #00cdac;
@@ -92,4 +95,77 @@
   top: 100%;
   left: 40%;
   height: 500px;
+}
+.hamburger-button {
+  display: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(153, 153, 153);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 800px) {
+  .navigation,
+  .darknavigation {
+    display: none;
+  }
+  .hamburger-button {
+    display: block;
+  }
+
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(21 21 21) 0%,
+      rgb(64, 64, 64) 90.2%
+    );
+    z-index: 9999;
+    color: #999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  .hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .hamburger-menu li {
+    padding: 10px;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 }

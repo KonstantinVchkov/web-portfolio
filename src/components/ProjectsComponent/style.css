@@ -156,7 +156,7 @@
 }
 
 @media (max-width:650px) {
-  .project-card{
+  .project-card,.project-card-dark{
     width: 350px;
   }
 }

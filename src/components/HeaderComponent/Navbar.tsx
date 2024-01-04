@@ -11,11 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 export const Navbar = () => {
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
-
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="header">
       <div className="social-media">
@@ -51,6 +52,34 @@ export const Navbar = () => {
           ))}
         </ul>
       </div>
+      {/* Hamburger Menu Button */}
+      <div className="hamburger-button" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className={`bar ${menuOpen ? "change" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "change" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "change" : ""}`}></div>
+      </div>
+
+      {/* Hamburger Menu */}
+      {menuOpen && (
+        <div className="hamburger-menu">
+          <ul>
+            {routes.map((nav, idx) => (
+              <li key={idx}>
+                <Link
+                  to={nav.href}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-70}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {nav.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="themeChange">
         <ToggleThemeButton />
       </div>
