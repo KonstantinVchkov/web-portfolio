@@ -11,11 +11,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub, FaBars } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 export const Navbar = () => {
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
-  const [menuOpen, setMenuOpen] = useState(false);
+  const changeHambCn =
+    theme === "light" ? "hamburger-menu" : "hamburger-menu-dark";
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <div className="header">
       <div className="social-media">
@@ -34,47 +37,15 @@ export const Navbar = () => {
         </Link>
         <div className="line"></div>
       </div>
-      {/* {menuOpen ? (
-        <div className="hamburger-menu">
-          Hamburger menu
-          <ul>
-            {routes.map((nav, idx) => (
-              <Link
-                to={nav.href}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-70}
-                onClick={() => setMenuOpen(false)}
-                key={idx}
-              >
-                <li>{nav.title}</li>
-              </Link>
-            ))}
-          </ul>
-        </div>
-      ) : (
-        <div className={changeCn}>
-          navigation menu - desktop version
-          <ul>
-            {routes.map((nav, idx) => (
-              <Link
-                key={idx}
-                to={nav.href}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-70}
-              >
-                <li>{nav.title}</li>
-              </Link>
-            ))}
-          </ul>
-        </div>
-      )} */}
       <div className={`${menuOpen ? "hamburger-button" : `${changeCn}`}`}>
-        {/* navigation menu - desktop version */}
-        <div className={` ${menuOpen && "hamburger-menu"}`} style={{background: theme === 'light' ? 'radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%)' : 'radial-gradient(circle at 10% 20%, rgb(21 21 21) 0%, rgb(64, 64, 64) 90.2%)'}}>
+        {/* navigation menu - desktop version and mobile version*/}
+        <div className={`${menuOpen && changeHambCn}`}>
+          {menuOpen && (
+            <IoClose
+              className="close-hamb"
+              onClick={() => setMenuOpen(false)}
+            />
+          )}
           <ul>
             {routes.map((nav, idx) => (
               <Link
