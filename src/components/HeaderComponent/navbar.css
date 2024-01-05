@@ -100,26 +100,7 @@
   display: none;
   cursor: pointer;
   margin-left: 10px;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(153, 153, 153);
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.change .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.change .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+  font-size: 25px;
 }
 
 @media (max-width: 800px) {
@@ -149,6 +130,7 @@
     align-items: center;
     justify-content: center;
     animation: slideIn 0.5s ease-in-out;
+    
   }
 
   .hamburger-menu ul {
@@ -156,8 +138,9 @@
     padding: 0;
   }
 
-  .hamburger-menu li {
+  .hamburger-menu ul li {
     padding: 10px;
+    cursor: pointer;
   }
 
   @keyframes slideIn {

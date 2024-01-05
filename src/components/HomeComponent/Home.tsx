@@ -32,9 +32,6 @@ const Home = () => {
           >
             Know more about me
           </Link>
-          {/* <a rel="noreferrer"  href="#about">
-           
-          </a> */}
         </p>
       </div>
     </section>
