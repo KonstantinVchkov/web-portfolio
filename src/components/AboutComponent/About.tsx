@@ -4,8 +4,9 @@ interface AboutMe {
   name?: string;
   lastname?: string;
   aboutme: string;
+  skills: string[];
 }
-const About = ({ name, lastname, aboutme }: AboutMe) => {
+const About = ({ aboutme, skills }: AboutMe) => {
   const { theme } = useThemeContext();
   const aboutBgTheme =
     theme === "light"
@@ -23,18 +24,29 @@ const About = ({ name, lastname, aboutme }: AboutMe) => {
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info load-hidden">
               <p className="about-wrapper__info-text">{aboutme}</p>
-              <span className="d-flex mt-3">
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  className="cta-btn about-btn cta-btn--hero"
-                  href={"/assets/KonstantinVchkov_CV.pdf"}
-                >
-                  View Resume
-                </a>
-              </span>
             </div>
           </div>
+          <div className="skills">
+            <h2>Tech Skills</h2>
+            {skills.map(
+              (
+                skill,
+                idx 
+              ) => (
+                <p key={idx}>{skill}</p> 
+              )
+            )}
+          </div>
+          <span className="d-flex mt-3">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className="cta-btn about-btn cta-btn--hero"
+              href={"/assets/KonstantinVchkov_CV.pdf"}
+            >
+              View Resume
+            </a>
+          </span>
         </div>
       </div>
     </div>

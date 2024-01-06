@@ -2,7 +2,7 @@ import { Navbar } from "./components/HeaderComponent/Navbar";
 import Home from "./components/HomeComponent/Home";
 import "./App.css";
 import About from "./components/AboutComponent/About";
-import { aboutMe, projectsData, skills } from "./data/db";
+import { aboutMe, projectsData } from "./data/db";
 // import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/ProjectCard";
 import { ContactUs } from "./components/ContactComponent/Contact";
@@ -20,14 +20,12 @@ function App() {
       <ThemeProvider>
         <Navbar />
         <Home />
-        
-        <About aboutme={aboutMe.aboutme} />
+        <About aboutme={aboutMe.aboutme} skills={aboutMe.skills}/>
         <div id="projects" className="projects">
           {projectsData.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
           ))}
         </div>
-        {/* <Skills skills={skills} /> */}
         <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
       </ThemeProvider>
