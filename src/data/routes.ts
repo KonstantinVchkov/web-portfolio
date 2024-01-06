@@ -1,22 +1,22 @@
 export const routes = [
   {
     title: "Home",
-    href: "hero",
+    hash: "hero",
   },
   {
     title: "About",
-    href: "about",
+    hash: "about",
   },
   {
     title: "Projects",
-    href: "projects",
+    hash: "projects",
   },
-  {
-    title: "Skills",
-    href: "skills",
-  },
+  // {
+  //   title: "Skills",
+  //   href: "skills",
+  // },
   {
     title: "Contact",
-    href: "contact",
+    hash: "contact",
   },
 ];

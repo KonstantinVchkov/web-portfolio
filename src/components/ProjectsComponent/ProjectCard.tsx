@@ -25,7 +25,7 @@ const ProjectCard = ({
       scale: scaleProgress,
       opacity:scrollYProgress
     }}
-    ref={ref} id="projects" className={classes}>
+    ref={ref}  className={classes}>
       <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
           <h3 className="project-wrapper__text-title">{name}</h3>

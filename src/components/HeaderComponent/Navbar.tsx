@@ -12,13 +12,18 @@ import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import React from "react";
+// import { useLocation } from "react-router";
 export const Navbar = () => {
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
   const changeHambCn =
     theme === "light" ? "hamburger-menu" : "hamburger-menu-dark";
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const linkRef = React.createRef()
+  console.log('this is the location',linkRef)
+  // const location = useLocation()
   return (
     <div className="header">
       <div className="social-media">
@@ -50,12 +55,17 @@ export const Navbar = () => {
             {routes.map((nav, idx) => (
               <Link
                 key={idx}
-                to={nav.href}
+                to={`${nav.hash}`}
+                // href={nav.hash}
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-70}
+                // ref={linkRef}
                 onClick={() => setMenuOpen(false)}
+                hashSpy={true}
+                // activeStyle={React}
+                // containerId={nav.hash}
               >
                 <li>{nav.title}</li>
               </Link>

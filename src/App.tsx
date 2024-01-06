@@ -3,7 +3,7 @@ import Home from "./components/HomeComponent/Home";
 import "./App.css";
 import About from "./components/AboutComponent/About";
 import { aboutMe, projectsData, skills } from "./data/db";
-import Skills from "./components/Skills/Skills";
+// import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/ProjectCard";
 import { ContactUs } from "./components/ContactComponent/Contact";
 import ThemeProvider from "./Hoc/ThemeProvider";
@@ -14,14 +14,15 @@ function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-  
+
   return (
     <div className="App">
       <ThemeProvider>
         <Navbar />
         <Home />
+        
         <About aboutme={aboutMe.aboutme} />
-        <div className="projects">
+        <div id="projects" className="projects">
           {projectsData.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
           ))}
