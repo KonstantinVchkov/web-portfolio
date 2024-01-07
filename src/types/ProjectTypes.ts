@@ -7,3 +7,12 @@ export interface IProject {
   showLive?: string;
   image: string;
 }
+
+export type TNavbar = {
+  mobile:string;
+  email:string;
+  github:string;
+  linkedIn:string;
+  instagram:string;
+  facebook:string;
+}

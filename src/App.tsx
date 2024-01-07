@@ -2,7 +2,7 @@ import { Navbar } from "./components/HeaderComponent/Navbar";
 import Home from "./components/HomeComponent/Home";
 import "./App.css";
 import About from "./components/AboutComponent/About";
-import { aboutMe, projectsData } from "./data/db";
+import { aboutMe, contact, projectsData } from "./data/db";
 // import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/ProjectCard";
 import { ContactUs } from "./components/ContactComponent/Contact";
@@ -14,11 +14,11 @@ function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-
+  console.log('from contact: ', contact)
   return (
     <div className="App">
       <ThemeProvider>
-        <Navbar />
+        <Navbar {...contact}/>
         <Home />
         <About aboutme={aboutMe.aboutme} skills={aboutMe.skills}/>
         <div id="projects" className="projects">

@@ -102,7 +102,12 @@
   margin-left: 10px;
   font-size: 25px;
 }
-
+.call-box{
+  position: relative;
+}
+.number{
+  position: absolute;
+}
 @media (max-width: 800px) {
   .navigation,
   .darknavigation {

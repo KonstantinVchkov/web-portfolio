@@ -12,33 +12,50 @@ import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import {  useState } from "react";
-import React from "react";
-export const Navbar = () => {
+import { useState } from "react";
+import { TNavbar } from "../../types/ProjectTypes";
+
+export const Navbar = ({
+  mobile,
+  email,
+  github,
+  linkedIn,
+  instagram,
+  facebook,
+}: TNavbar) => {
   const { theme } = useThemeContext();
+  const [showNumber, setShowNumber] = useState<boolean>(false);
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
   const changeHambCn =
     theme === "light" ? "hamburger-menu" : "hamburger-menu-dark";
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const linkRef = React.createRef()
-  console.log('this is the location',linkRef)
-  // const location = useLocation()
+
   return (
     <div className="header">
       <div className="social-media">
-        <IoIosCall className="call" />
-        <Link to={""}>
+        <div className="call-box">
+          <IoIosCall
+            className="call"
+            onClick={() => setShowNumber(!showNumber)}
+          />
+          {showNumber && (
+            <a href={`${mobile}`}>
+              <span className="number">{mobile}</span>
+            </a>
+          )}
+        </div>
+        <a href={`${instagram}`} target="_blank">
           <FontAwesomeIcon icon={faInstagram} />
-        </Link>
-        <Link to={""}>
+        </a>
+        <a href={linkedIn} target="_blank">
           <FontAwesomeIcon icon={faLinkedin} />
-        </Link>
-        <Link to={""}>
+        </a>
+        <a href={facebook} target="_blank">
           <FontAwesomeIcon icon={faFacebook} />
-        </Link>
-        <Link to={""}>
+        </a>
+        <a href={github} target="_blank">
           <FaGithub />
-        </Link>
+        </a>
         <div className="line"></div>
       </div>
       <div className={`${menuOpen ? "hamburger-button" : `${changeCn}`}`}>

@@ -7,7 +7,6 @@ import "./style.css";
 // });
 import AnimationJson from "./lottie-web/mail-animation.json";
 import LottieAnimation from "./LottieAnimation";
-import { useThemeContext } from "../../context/ThemeContext";
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
 
@@ -35,8 +34,6 @@ export const ContactUs = () => {
         );
     }
   };
-  const { theme } = useThemeContext();
-  // const changingTheme = theme === 'light' ? 'ContactUs' : 'ContactUsDark'
   return (
     <div id="contact" className="ContactForm">
       <div className="Animation">

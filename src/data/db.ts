@@ -23,11 +23,12 @@ export const aboutMe = {
 // export const skills = ;
 
 export const contact = {
-  mobile: +38978268997,
+  mobile: "+38978268997",
   email: "konstantin.vchkov@gmail.com",
   github: "https://github.com/KonstantinVchkov",
   linkedIn: "https://www.linkedin.com/in/konstantin-vchkov-b39200210/",
   instagram: "https://www.instagram.com/konstantintinko/",
+  facebook: "https://www.facebook.com/konstantin.vckov",
 };
 export const projectsData = [
   {
