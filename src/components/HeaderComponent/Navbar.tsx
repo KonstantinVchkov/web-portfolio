@@ -12,9 +12,8 @@ import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import React from "react";
-// import { useLocation } from "react-router";
 export const Navbar = () => {
   const { theme } = useThemeContext();
   const changeCn = theme === "light" ? "navigation" : "darknavigation";

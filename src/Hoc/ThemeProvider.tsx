@@ -8,7 +8,7 @@ const ThemeProvider = ({ children }: any) => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const color = theme === "light" ? "#999999" : "#999999";
+  const color = theme === "light" ? "#999999" : "#f1ecec";
   const backgroundColor =
     theme === "light"
       ? "radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%)"
