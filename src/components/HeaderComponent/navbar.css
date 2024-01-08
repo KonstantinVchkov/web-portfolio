@@ -96,6 +96,9 @@
   left: 40%;
   height: 500px;
 }
+.active{
+  border-bottom: 2px solid #999999;
+}
 .hamburger-button {
   display: none;
   cursor: pointer;
@@ -107,6 +110,13 @@
 }
 .number{
   position: absolute;
+  font-size: 20px;
+  background-color: #00cdac;
+  color: aliceblue;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 5px;
+  width: 200px;
+  height: 30px;
 }
 @media (max-width: 800px) {
   .navigation,
@@ -144,6 +154,7 @@
       rgb(64, 64, 64) 90.2%
     );
   }
+
   .close-hamb {
     font-size: 35px;
     /* animation: slideOut 0.5s ease-in-out; */

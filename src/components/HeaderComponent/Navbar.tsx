@@ -12,7 +12,7 @@ import { IoIosCall } from "react-icons/io";
 import { Link } from "react-scroll";
 import { FaGithub, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { TNavbar } from "../../types/ProjectTypes";
 
 export const Navbar = ({
@@ -24,16 +24,22 @@ export const Navbar = ({
   facebook,
 }: TNavbar) => {
   const { theme } = useThemeContext();
+  const target = useRef(null);
   const [showNumber, setShowNumber] = useState<boolean>(false);
+  const [activeClass, setActiveClass] = useState("");
   const changeCn = theme === "light" ? "navigation" : "darknavigation";
   const changeHambCn =
     theme === "light" ? "hamburger-menu" : "hamburger-menu-dark";
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const handleActive = (to: string) => {
+    const isActive = window.location.hash === `#${to}`;
 
+    setActiveClass(isActive ? "active" : "");
+  };
   return (
     <div className="header">
       <div className="social-media">
-        <div className="call-box">
+        <div ref={target} className="call-box">
           <IoIosCall
             className="call"
             onClick={() => setShowNumber(!showNumber)}
@@ -70,18 +76,16 @@ export const Navbar = ({
           <ul>
             {routes.map((nav, idx) => (
               <Link
+                activeClass={activeClass}
+                onSetActive={() => handleActive(nav.hash)}
                 key={idx}
                 to={`${nav.hash}`}
-                // href={nav.hash}
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-70}
-                // ref={linkRef}
                 onClick={() => setMenuOpen(false)}
                 hashSpy={true}
-                // activeStyle={React}
-                // containerId={nav.hash}
               >
                 <li>{nav.title}</li>
               </Link>

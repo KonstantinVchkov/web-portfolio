@@ -18,7 +18,7 @@
   background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   box-shadow: 8px 3px 10px 0px rgba(0, 0, 0, 0.23);
   font-size: 17px;
-  color: #999999;
+  /* color: #999999; */
 }
 
 .thumbnail img {
