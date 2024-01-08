@@ -9,7 +9,7 @@ const ProjectCard = ({
   linkcode,
   description,
   tech,
-  image,
+  imgsrc,
 }: IProject) => {
   const ref = useRef<HTMLDivElement>(null);
   const {scrollYProgress} = useScroll({
@@ -58,7 +58,7 @@ const ProjectCard = ({
               data-tilt-max-glare="0.5"
               className="thumbnail rounded js-tilt"
             >
-              <img alt="Project Image" className="img-fluid" src={image} />
+              <img alt="Project-card-img" className="img-fluid" src={imgsrc} />
             </div>
           </a>
         </div>

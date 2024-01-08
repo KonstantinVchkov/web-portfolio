@@ -5,7 +5,7 @@ export interface IProject {
   handleClick?: () => void;
   linkcode?: string;
   showLive?: string;
-  image: string;
+  imgsrc: string;
 }
 
 export type TNavbar = {

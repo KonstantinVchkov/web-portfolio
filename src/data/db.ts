@@ -36,7 +36,7 @@ export const projectsData = [
     tech: ["HTML", "CSS", "JAVASCRIPT", "Bootstrap"],
     description:
       "Brainster Labs is a project on which we will place all the projects Brainster students (Design Academy, Coding Academy, Marketing Academy) have made.",
-    image: "/assets/brainster-labs-image.png",
+    imgsrc: "/assets/brainster-labs-image.png",
     linkCode: "https://github.com/KonstantinVchkov/Brainster-Labs",
   },
   {
@@ -44,7 +44,7 @@ export const projectsData = [
     tech: ["HTML", "CSS", "BOOTSTRAP", "JAVASCRIPT"],
     description:
       "Mobile web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
-    image: "/assets/street-artist-image.png",
+    imgsrc: "/assets/street-artist-image.png",
     linkCode: "https://github.com/KonstantinVchkov/Street-Artists",
     showLive: "https://street-artist-brainster-project.netlify.app/",
   },
@@ -53,7 +53,7 @@ export const projectsData = [
     tech: ["React.Js", "SASS", "Styled Components", "Redux", "Firebase"],
     description:
       "Developed a fashion-focused e-commerce app using React.js, featuring an intuitive interface with Firebase backend for secure transactions. Enhanced with SASS, styled components, and Redux for visual appeal and performance, it merges fashion with advanced web technology.",
-    image: "/assets/e-commerce.png",
+    imgsrc: "/assets/e-commerce.png",
     linkCode: "https://github.com/KonstantinVchkov/E-Commerce",
   },
   {
@@ -69,7 +69,7 @@ export const projectsData = [
     ],
     description:
       "Created an online platform for a vintage women's clothing store using NextJS and jsonserver, incorporating e-commerce features and a mock REST API. This project, part ofmy academic work, combined aesthetic design with functional back-end structures using NodeJS and related packages.",
-    image: "/assets/igralishte-logo.png",
+    imgsrc: "/assets/igralishte-logo.png",
     linkcode: "https://github.com/KonstantinVchkov/igralishte",
     showLive: "https://igralishte.vercel.app/",
   },
@@ -88,7 +88,7 @@ export const projectsData = [
     ],
     description:
       "Contributed to a multi-disciplinary team developing an app for identifying air pollution hotspots, aimed at promoting environmental consciousness. My role focused on designing responsive user interfaces with Next.js, ensuring seamless integration with      back-end systems. The app successfully heightened public awareness about air pollution.",
-    image: "/assets/air-care-image.png",
+    imgsrc: "/assets/air-care-image.png",
     linkcode: "https://github.com/KonstantinVchkov/air-care",
   },
   {
@@ -96,7 +96,7 @@ export const projectsData = [
     tech: ["Next.Js", "CSS", "Bootstrap", "Typescript", "lottie-web", "Axios"],
     description:
       "Marinov Design is a bespoke e-commerce platform I developed, showcasing unique handcrafted jewelry and home decor. This project was an exciting opportunity to blend artistic content with cutting-edge web technologies, creating a unique online shopping experience that emphasizes craftsmanship and uniqueness",
-    image: "/assets/marinov-image.png",
+    imgsrc: "/assets/marinov-image.png",
     linkcode: "https://github.com/KonstantinVchkov/marinov-design",
   },
 ];
