@@ -27,7 +27,7 @@ export const contact = {
   email: "konstantin.vchkov@gmail.com",
   github: "https://github.com/KonstantinVchkov",
   linkedIn: "https://www.linkedin.com/in/konstantin-vchkov-b39200210/",
-  instagram: "https://www.instagram.com/konstantintinko/",
+  instagram: "https://www.instagram.com/vchkov.dev/",
   facebook: "https://www.facebook.com/konstantin.vckov",
 };
 export const projectsData = [
@@ -100,3 +100,4 @@ export const projectsData = [
     linkcode: "https://github.com/KonstantinVchkov/marinov-design",
   },
 ];
+// Macedonian Version

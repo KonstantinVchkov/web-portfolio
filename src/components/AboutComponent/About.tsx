@@ -33,7 +33,7 @@ const About = ({ aboutme, skills }: AboutMe) => {
                 skill,
                 idx 
               ) => (
-                <p key={idx}>{skill}</p> 
+                <p className="skill" key={idx}>{skill}</p> 
               )
             )}
           </div>
