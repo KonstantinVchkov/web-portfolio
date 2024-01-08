@@ -12,7 +12,7 @@ const About = ({ aboutme, skills }: AboutMe) => {
     theme === "light"
       ? "rgb(226 232 240)"
       : "radial-gradient(circle at 10% 20%, rgb(21, 21, 21) 0%, rgb(64, 64, 64) 90.2%)";
-
+const themeCn = theme === 'light' ? 'skill cta-btn cta-btn--hero' : 'dark-skill cta-btn cta-btn--hero'
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
       <div className="container d-flex justify-content-center align-center flex-column">
@@ -33,7 +33,7 @@ const About = ({ aboutme, skills }: AboutMe) => {
                 skill,
                 idx 
               ) => (
-                <p className="skill cta-btn cta-btn--hero" key={idx}>{skill}</p> 
+                <p className={themeCn} key={idx}>{skill}</p> 
               )
             )}
           </div>

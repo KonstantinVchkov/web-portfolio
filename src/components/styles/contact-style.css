@@ -27,10 +27,11 @@ textarea {
   border: 1px solid #999999;
   color: #999999;
 }
-/* .ContactUsDark {
-  background: inherit;
-  border: 1px solid #999999;
-} */
+.Animation h2 {
+  width: 350px;
+  margin: 10px auto;
+  font-size: 40px;
+}
 .name,
 .email {
   height: 25px;

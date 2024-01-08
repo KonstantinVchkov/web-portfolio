@@ -33,6 +33,7 @@ export const ContactUs = () => {
   return (
     <div id="contact" className="ContactForm">
       <div className="Animation">
+        <h2>Let's discuss your Project</h2>
         <LottieAnimation animationData={AnimationJson} />
       </div>
       <div className="ContactUs">
