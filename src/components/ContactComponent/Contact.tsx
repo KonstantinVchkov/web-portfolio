@@ -1,10 +1,6 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import "./style.css";
-
-// const LottieAnimation = dynamic(() => import("./LottieAnimation"), {
-//   ssr: false,
-// });
+import "../styles/contact-style.css";
 import AnimationJson from "./lottie-web/mail-animation.json";
 import LottieAnimation from "./LottieAnimation";
 export const ContactUs = () => {
