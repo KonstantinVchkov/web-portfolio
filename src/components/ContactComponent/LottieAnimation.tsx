@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import lottie, { AnimationItem } from 'lottie-web';
-// import style from './style.module.css'
 interface LottieAnimationProps {
   animationData: any; 
 }

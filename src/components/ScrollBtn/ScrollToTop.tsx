@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./style.css";
+import  { useEffect, useState } from "react";
+import "../styles/scroll-to-top-style.css";
 import { IoIosArrowUp } from "react-icons/io";
 type TScrollBtn = {
   handleScroll: () => void;

@@ -1,10 +1,7 @@
-import "./style.css";
+import "../styles/home-style.css";
 import "../styles/buttonStyle.css";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
-
-// import Typewriter from "typewriter-effect";
-
 const Home = () => {
   const sentences = [
     "Front-End Developer",
