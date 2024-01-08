@@ -50,16 +50,16 @@ export const Navbar = ({
             </a>
           )}
         </div>
-        <a href={`${instagram}`} target="_blank">
+        <a href={`${instagram}`} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href={linkedIn} target="_blank">
+        <a href={linkedIn} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a href={facebook} target="_blank">
+        <a href={facebook} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
-        <a href={github} target="_blank">
+        <a href={github} target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
         <div className="line"></div>

@@ -24,7 +24,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ animationData }) => {
         }
       };
     }
-  }, []);
+  }, [animationData]);
 
   return <div className={'AnimationImage'} ref={animationContainer}></div>;
 };
