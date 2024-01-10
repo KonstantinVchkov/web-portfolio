@@ -16,8 +16,14 @@ export const aboutMe = {
     "EXPRESS JS",
     "MONGO DB",
   ],
-  aboutme:
-    "👨🏻‍💻 I'm a dynamic and driven Front-end Developer with a comprehensive skillset ranging from HTML5 to advanced frameworks like React and Next.js. Self-motivated and always eager to embrace new challenges, I take pride in crafting user-centric designs that ensure an intuitive experience for end-users. My adaptable nature, combined with an intrinsic creative flair, positions me as a valuable asset for any forward-thinking web development team.",
+  firstParagraph:
+    "As a Front-end Developer, I am dedicated to crafting intuitive and engaging digital interfaces. My involvement in frontend territory has been enhanced by hands-on proficiency in HTML5, CSS3, SASS, BOOTSTRAP , JavaScript, JQUERY, TypeScript, React, Next Js, NodeJs, Express Js and MongoDb - skills honed through intensive training and tangible projects.",
+  secondParagraph:
+    "In a world where tech is continuously changing and improving, I strive to stay ahead, by enhancing my knowledge and skill, allowing me to implement the latest frontend advancements in my work. ",
+  thirdParagraph:
+    "My proficiency in this field is further enhanced by my proactive attitude and a team-first work ethic, with clear communication and adept problem-solving being some of the key aspects for my success. I enjoy a good challenge, allowing me to test and amplify both my knowledge and expertise as I play my role in the dynamic world of frontend design.",
+  fourthParagraph:
+    "My thirst for innovation makes me very enthusiastic about how the frontend world will evolve.  With my blend of creativity and tech know-how, I am ready for any exciting projects that reshape how users interact with the digital realm.",
 };
 
 export const contact = {

@@ -20,6 +20,9 @@
   border: none;
   margin-right: 5px;
 }
+.icon{
+  font-size: 40px;
+}
 .dark-skill {
   box-shadow: 8px 3px 10px 0px rgba(240, 240, 240, 0.2);
 }

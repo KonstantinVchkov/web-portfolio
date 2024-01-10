@@ -1,4 +1,4 @@
-export interface IProject {
+export type IProject = {
   name?: string;
   tech: string[];
   description: string;
@@ -6,13 +6,20 @@ export interface IProject {
   linkcode?: string;
   showLive?: string;
   imgsrc: string;
-}
+};
 
 export type TNavbar = {
-  mobile:string;
-  email:string;
-  github:string;
-  linkedIn:string;
-  instagram:string;
-  facebook:string;
-}
+  mobile: string;
+  email: string;
+  github: string;
+  linkedIn: string;
+  instagram: string;
+  facebook: string;
+};
+export type AboutMe = {
+  firstParagraph: string;
+  secondParagraph: string;
+  thirdParagraph: string;
+  fourthParagraph: string;
+  skills: string[];
+};

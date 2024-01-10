@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import "../../styles/about.css";
 import { AboutBgTheme } from "../../utils/AboutTheme";
-interface AboutMe {
-  name?: string;
-  lastname?: string;
-  aboutme: string;
-  skills: string[];
-}
-const About = ({ aboutme, skills }: AboutMe) => {
+import { AboutMe } from "../../types/ProjectTypes";
+
+const About = ({
+  firstParagraph,
+  secondParagraph,
+  thirdParagraph,
+  fourthParagraph,
+  skills,
+}: AboutMe) => {
   const { aboutBgTheme, themeCn } = AboutBgTheme();
   const [visibleSkillsCount, setVisibleSkillsCount] = useState(4);
   const [isTabletMode, setIsTabletMode] = useState(false);
@@ -29,8 +31,8 @@ const About = ({ aboutme, skills }: AboutMe) => {
     setVisibleSkillsCount(Math.min(newVisibleSkillsCount, skills.length));
   };
   const skillsContainerStyle = {
-    height: isTabletMode ? `${visibleSkillsCount * 55}px` : 'auto', 
-    overflow: 'hidden',
+    height: isTabletMode ? `${visibleSkillsCount * 55}px` : "auto",
+    overflow: "hidden",
   };
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
@@ -41,8 +43,13 @@ const About = ({ aboutme, skills }: AboutMe) => {
             <img src="/assets/logo_transparent.png" alt="" />
           </div>
           <div className="col-md-6 col-sm-12">
+            
             <div className="about-wrapper__info load-hidden">
-              <p className="about-wrapper__info-text">{aboutme}</p>
+              <span className="icon">👨🏻‍💻</span>
+              <p className="about-wrapper__info-text">{firstParagraph}</p>
+              <p className="about-wrapper__info-text">{secondParagraph}</p>
+              <p className="about-wrapper__info-text">{thirdParagraph}</p>
+              <p className="about-wrapper__info-text">{fourthParagraph}</p>
             </div>
           </div>
           <div className="skills" style={skillsContainerStyle}>

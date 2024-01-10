@@ -14,13 +14,13 @@ function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-  console.log('from contact: ', contact)
+  console.log("from contact: ", contact);
   return (
     <div className="App">
       <ThemeProvider>
-        <Navbar {...contact}/>
+        <Navbar {...contact} />
         <Home />
-        <About aboutme={aboutMe.aboutme} skills={aboutMe.skills}/>
+        <About {...aboutMe} />
         <div id="projects" className="projects">
           {projectsData.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
