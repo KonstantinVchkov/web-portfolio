@@ -9,23 +9,24 @@ const ProjectCard = ({
   linkcode,
   description,
   tech,
-  imgsrc,
 }: IProject) => {
   const ref = useRef<HTMLDivElement>(null);
-  const {scrollYProgress} = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
- const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5,1])
- const {theme} = useThemeContext()
- const classes = theme === 'light' ? 'project-card' : 'project-card-dark'
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const { theme } = useThemeContext();
+  const classes = theme === "light" ? "project-card" : "project-card-dark";
   return (
     <motion.div
-    style={{
-      scale: scaleProgress,
-      opacity:scrollYProgress
-    }}
-    ref={ref}  className={classes}>
+      style={{
+        scale: scaleProgress,
+        opacity: scrollYProgress,
+      }}
+      ref={ref}
+      className={classes}
+    >
       <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
           <h3 className="project-wrapper__text-title">{name}</h3>
@@ -48,25 +49,12 @@ const ProjectCard = ({
           </a>
         </div>
       </div>
-      <div className="col-lg-8 col-sm-12">
-        <div className="project-wrapper__image load-hidden">
-          <a rel="noreferrer" href="#!" target="_blank">
-            <div
-              data-tilt
-              data-tilt-max="4"
-              data-tilt-glare="true"
-              data-tilt-max-glare="0.5"
-              className="thumbnail rounded js-tilt"
-            >
-              <img alt="Project-card-img" className="img-fluid" src={imgsrc} />
-            </div>
-          </a>
-        </div>
-      </div>
       <h2>Tech Stack Used:</h2>
       <div className="tech-stacks">
-        {tech.map((techstack,idx) => (
-          <span key={idx} className="tech my-4">{techstack}</span>
+        {tech.map((techstack, idx) => (
+          <span key={idx} className="tech my-4">
+            {techstack}
+          </span>
         ))}
       </div>
     </motion.div>
