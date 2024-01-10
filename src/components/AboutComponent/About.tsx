@@ -28,6 +28,10 @@ const About = ({ aboutme, skills }: AboutMe) => {
     const newVisibleSkillsCount = visibleSkillsCount + 4;
     setVisibleSkillsCount(Math.min(newVisibleSkillsCount, skills.length));
   };
+  const skillsContainerStyle = {
+    height: isTabletMode ? `${visibleSkillsCount * 55}px` : 'auto', 
+    overflow: 'hidden',
+  };
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
       <div className="container d-flex justify-content-center align-center flex-column">
@@ -41,7 +45,7 @@ const About = ({ aboutme, skills }: AboutMe) => {
               <p className="about-wrapper__info-text">{aboutme}</p>
             </div>
           </div>
-          <div className="skills">
+          <div className="skills" style={skillsContainerStyle}>
             <h2>Tech Skills</h2>
             {skills
               .slice(0, isTabletMode ? visibleSkillsCount : skills.length)
