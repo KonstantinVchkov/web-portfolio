@@ -83,6 +83,7 @@
 }
 .about-btn {
   margin-top: 15px;
+  background-color: inherit;
 }
 .about-wrapper__info {
   display: flex;

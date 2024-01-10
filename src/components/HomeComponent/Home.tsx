@@ -2,13 +2,8 @@ import "../../styles/home-style.css";
 import "../../styles/buttonStyle.css";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
+import { sentences } from "../../data/db";
 const Home = () => {
-  const sentences = [
-    "Front-End Developer",
-    "React Developer",
-    "Next js Developer",
-  ];
-
   return (
     <section id="hero" className="jumbotron">
       <div className="container">

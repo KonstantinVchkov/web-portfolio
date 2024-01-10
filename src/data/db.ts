@@ -20,8 +20,6 @@ export const aboutMe = {
     "👨🏻‍💻 I'm a dynamic and driven Front-end Developer with a comprehensive skillset ranging from HTML5 to advanced frameworks like React and Next.js. Self-motivated and always eager to embrace new challenges, I take pride in crafting user-centric designs that ensure an intuitive experience for end-users. My adaptable nature, combined with an intrinsic creative flair, positions me as a valuable asset for any forward-thinking web development team.",
 };
 
-// export const skills = ;
-
 export const contact = {
   mobile: "+38978268997",
   email: "konstantin.vchkov@gmail.com",
@@ -99,5 +97,13 @@ export const projectsData = [
     imgsrc: "/assets/marinov-image.png",
     linkcode: "https://github.com/KonstantinVchkov/marinov-design",
   },
+];
+export const sentences = [
+  "Front-End Developer",
+  "Back-End Developer",
+  "React Native",
+  "React.Js",
+  "Next.Js",
+  "Node.Js",
 ];
 // Macedonian Version

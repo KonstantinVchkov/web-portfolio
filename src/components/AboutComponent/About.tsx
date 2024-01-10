@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import "../../styles/about.css";
-import { useThemeContext } from "../../context/ThemeContext";
+import { AboutBgTheme } from "../../utils/AboutTheme";
 interface AboutMe {
   name?: string;
   lastname?: string;
@@ -7,12 +8,26 @@ interface AboutMe {
   skills: string[];
 }
 const About = ({ aboutme, skills }: AboutMe) => {
-  const { theme } = useThemeContext();
-  const aboutBgTheme =
-    theme === "light"
-      ? "rgb(226 232 240)"
-      : "radial-gradient(circle at 10% 20%, rgb(21, 21, 21) 0%, rgb(64, 64, 64) 90.2%)";
-const themeCn = theme === 'light' ? 'skill cta-btn cta-btn--hero' : 'dark-skill cta-btn cta-btn--hero'
+  const { aboutBgTheme, themeCn } = AboutBgTheme();
+  const [visibleSkillsCount, setVisibleSkillsCount] = useState(4);
+  const [isTabletMode, setIsTabletMode] = useState(false);
+
+  useEffect(() => {
+    updateTabletMode();
+    window.addEventListener("resize", updateTabletMode);
+    return () => {
+      window.removeEventListener("resize", updateTabletMode);
+    };
+  }, []);
+
+  const updateTabletMode = () => {
+    setIsTabletMode(window.innerWidth <= 800);
+  };
+
+  const handleDrop = () => {
+    const newVisibleSkillsCount = visibleSkillsCount + 4;
+    setVisibleSkillsCount(Math.min(newVisibleSkillsCount, skills.length));
+  };
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
       <div className="container d-flex justify-content-center align-center flex-column">
@@ -28,15 +43,22 @@ const themeCn = theme === 'light' ? 'skill cta-btn cta-btn--hero' : 'dark-skill 
           </div>
           <div className="skills">
             <h2>Tech Skills</h2>
-            {skills.map(
-              (
-                skill,
-                idx 
-              ) => (
-                <p className={themeCn} key={idx}>{skill}</p> 
-              )
-            )}
+            {skills
+              .slice(0, isTabletMode ? visibleSkillsCount : skills.length)
+              .map((skill, idx) => (
+                <p className={themeCn} key={idx}>
+                  {skill}
+                </p>
+              ))}
           </div>
+          {isTabletMode && visibleSkillsCount < skills.length && (
+            <button
+              onClick={handleDrop}
+              className="cta-btn about-btn cta-btn--hero"
+            >
+              Show More
+            </button>
+          )}
           <span className="d-flex mt-3">
             <a
               rel="noreferrer"
