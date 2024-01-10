@@ -43,7 +43,6 @@ const About = ({
             <img src="/assets/logo_transparent.png" alt="" />
           </div>
           <div className="col-md-6 col-sm-12">
-            
             <div className="about-wrapper__info load-hidden">
               <span className="icon">👨🏻‍💻</span>
               <p className="about-wrapper__info-text">{firstParagraph}</p>
