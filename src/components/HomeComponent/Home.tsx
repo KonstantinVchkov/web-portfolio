@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import { sentences } from "../../data/db";
 const Home = () => {
   return (
-    <section id="hero" className="jumbotron">
+    <section id="#" className="jumbotron hero">
       <div className="container">
         <h1 className="hero-title load-hidden">
           Hi There, I'm{" "}
