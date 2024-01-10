@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { IProject } from "../../types/ProjectTypes";
-import "../styles/project-card-style.css";
+import "../../styles/project-card-style.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useThemeContext } from "../../context/ThemeContext";
 const ProjectCard = ({

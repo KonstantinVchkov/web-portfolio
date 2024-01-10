@@ -10,21 +10,18 @@
 .navigation,
 .darknavigation {
   margin: 0px auto;
-  background: radial-gradient(
-    circle at 18.7% 37.8%,
-    rgb(250, 250, 250) 0%,
-    rgb(225, 234, 238) 90%
-  );
+  background: radial-gradient( circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90% );
   box-shadow: -1px 1px 12px -1px rgba(0, 0, 0, 0.54);
-  border-radius: 60px;
-  font-weight: 600;
+  border-radius: 10px;
+  width: 400px;
+  font-weight: 500;
 }
 .navigation ul,
 .darknavigation ul {
   display: flex;
+  justify-content: center;
   margin: 10px auto;
   padding: 0;
-  /* padding-left: 15px; */
 }
 .navigation ul li,
 .darknavigation ul li {
@@ -97,7 +94,7 @@
   height: 500px;
 }
 .active{
-  border-bottom: 2px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 .hamburger-button {
   display: none;

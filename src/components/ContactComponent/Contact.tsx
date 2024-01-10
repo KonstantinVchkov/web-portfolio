@@ -1,6 +1,6 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import "../styles/contact-style.css";
+import "../../styles/contact-style.css";
 import AnimationJson from "./lottie-web/mail-animation.json";
 import LottieAnimation from "./LottieAnimation";
 export const ContactUs = () => {

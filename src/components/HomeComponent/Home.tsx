@@ -1,5 +1,5 @@
-import "../styles/home-style.css";
-import "../styles/buttonStyle.css";
+import "../../styles/home-style.css";
+import "../../styles/buttonStyle.css";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 const Home = () => {

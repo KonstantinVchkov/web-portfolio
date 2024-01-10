@@ -1,4 +1,4 @@
-import "../styles/about.css";
+import "../../styles/about.css";
 import { useThemeContext } from "../../context/ThemeContext";
 interface AboutMe {
   name?: string;

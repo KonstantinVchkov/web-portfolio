@@ -1,5 +1,5 @@
 import { routes } from "../../data/routes";
-import "../styles/navbar-style.css";
+import "../../styles/navbar-style.css";
 import ToggleThemeButton from "../ThemeButton/ToggleThemeButton";
 import { useThemeContext } from "../../context/ThemeContext";
 import {
