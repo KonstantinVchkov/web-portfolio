@@ -29,7 +29,7 @@ const Home = () => {
           </Link>
         </p>
         <ReCAPTCHA
-          sitekey="6Lex3U0pAAAAAPigCGy80GZpLUf2zrPdqE-LNKSC"
+          sitekey="6LeD6U0pAAAAAOoipxo_JEHn2VE3kPuiCblIi9fx"
           onChange={(val: any) => setCaptVal(val)}
         />
       </div>
