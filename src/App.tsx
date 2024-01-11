@@ -8,7 +8,7 @@ import { ContactUs } from "./components/ContactComponent/Contact";
 import ThemeProvider from "./Hoc/ThemeProvider";
 import { animateScroll as scroll } from "react-scroll";
 import ScrollButton from "./components/ScrollBtn/ScrollToTop";
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -27,6 +27,7 @@ function App() {
         </div>
         <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
+        <Analytics />
       </ThemeProvider>
     </div>
   );
