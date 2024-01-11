@@ -38,6 +38,8 @@ export const Navbar = ({
   };
   return (
     <div className="header">
+      {/* <div className="logo-header">
+      </div> */}
       <div className="social-media">
         <div ref={target} className="call-box">
           <IoIosCall

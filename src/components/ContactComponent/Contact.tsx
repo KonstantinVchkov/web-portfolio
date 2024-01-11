@@ -47,6 +47,7 @@ export const ContactUs = () => {
             className="name"
             type="text"
             name="user_name"
+            required
           />
           <label>Email</label>
           <input
@@ -54,10 +55,11 @@ export const ContactUs = () => {
             className="email"
             type="email"
             name="user_email"
+            required
           />
           <label>Message</label>
-          <textarea placeholder="Message..." className="area" name="message" />
-          <ReCAPTCHA sitekey="6LfRiE0pAAAAAGvWSYQp_Rggse9DWcXXFu3VVfrz" onChange={(val:any) => setCaptVal(val)} />
+          <textarea placeholder="Message..." className="area" required name="message" />
+          <ReCAPTCHA sitekey="6Lex3U0pAAAAAPigCGy80GZpLUf2zrPdqE-LNKSC" onChange={(val:any) => setCaptVal(val)} />
           <input className="form-submit" disabled={!captVal} type="submit" value="Send" />
         </form>
       </div>
