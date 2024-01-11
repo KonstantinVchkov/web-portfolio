@@ -14,6 +14,7 @@
     "@types/node": "^16.18.68",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
+    "@vercel/analytics": "^1.1.1",
     "framer-motion": "^10.16.16",
     "hamburger-react": "^2.5.0",
     "lottie-web": "^5.12.2",
