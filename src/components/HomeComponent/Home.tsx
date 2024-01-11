@@ -3,10 +3,7 @@ import "../../styles/buttonStyle.css";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import { sentences } from "../../data/db";
-import ReCAPTCHA from "react-google-recaptcha";
-import { useState } from "react";
 const Home = () => {
-  const [captVal, setCaptVal] = useState(null);
   return (
     <section id="#" className="jumbotron hero">
       <div className="container">
@@ -28,10 +25,6 @@ const Home = () => {
             Know more about me
           </Link>
         </p>
-        <ReCAPTCHA
-          sitekey="6LeD6U0pAAAAAOoipxo_JEHn2VE3kPuiCblIi9fx"
-          onChange={(val: any) => setCaptVal(val)}
-        />
       </div>
     </section>
   );
