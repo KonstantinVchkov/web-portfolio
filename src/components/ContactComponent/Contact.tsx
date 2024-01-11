@@ -44,11 +44,28 @@ export const ContactUs = () => {
         <h1 className="title text-center mb-4">Talk to Us</h1>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
-          <input placeholder="Name..." required className="name" type="text" name="user_name" />
+          <input
+            placeholder="Name..."
+            required
+            className="name"
+            type="text"
+            name="user_name"
+          />
           <label>Email</label>
-          <input placeholder="Email..." required className="email" type="email" name="user_email" />
+          <input
+            placeholder="Email..."
+            required
+            className="email"
+            type="email"
+            name="user_email"
+          />
           <label>Message</label>
-          <textarea placeholder="Message..." required className="area" name="message" />
+          <textarea
+            placeholder="Message..."
+            required
+            className="area"
+            name="message"
+          />
           <ReCAPTCHA
             sitekey="6Lea_U0pAAAAAFGhtqhoUxYDNCaerv1a0aovqght"
             onChange={(val: string | null) => setCaptVal(val)}
