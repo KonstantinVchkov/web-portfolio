@@ -59,7 +59,6 @@ export const ContactUs = () => {
           />
           <label>Message</label>
           <textarea placeholder="Message..." className="area" required name="message" />
-          <ReCAPTCHA sitekey="6Lex3U0pAAAAAPigCGy80GZpLUf2zrPdqE-LNKSC" onChange={(val:any) => setCaptVal(val)} />
           <input className="form-submit" disabled={!captVal} type="submit" value="Send" />
         </form>
       </div>
