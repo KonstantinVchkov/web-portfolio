@@ -50,7 +50,7 @@ const About = ({
         <h2 className="section-title load-hidden">About me</h2>
         <div className="row about-wrapper">
           <div className="col-md-6 logo">
-            <img src="/assets/logo_transparent.png" alt="" />
+            <img src="/assets/logo-vchkov-dev.png" alt="" />
           </div>
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info load-hidden">
