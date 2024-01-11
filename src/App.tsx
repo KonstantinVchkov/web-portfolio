@@ -16,6 +16,7 @@ function App() {
   console.log("from contact: ", contact);
   return (
     <div className="App">
+      <Analytics />
       <ThemeProvider>
         <Navbar {...contact} />
         <Home />
@@ -27,7 +28,6 @@ function App() {
         </div>
         <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
-        <Analytics />
       </ThemeProvider>
     </div>
   );
