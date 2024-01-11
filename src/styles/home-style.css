@@ -1,11 +1,10 @@
-#hero {
+.hero {
   min-height: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
   font-weight: 400;
-  /* color: #999999; */
   padding: 0rem 5.6rem;
   margin-bottom: 0;
   top: 0;
@@ -20,7 +19,7 @@
 }
 /* Responsive styles for phone */
 @media (max-width: 400px) {
-  #hero {
+  .hero {
     padding: 0rem /* $default-font-size */ 1rem; /* Replace with actual font size */
   }
 }

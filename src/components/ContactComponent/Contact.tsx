@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../../styles/contact-style.css";
 import AnimationJson from "./lottie-web/mail-animation.json";
 import LottieAnimation from "./LottieAnimation";
+import ReCAPTCHA from "react-google-recaptcha";
+
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
-
+  const [captVal,setCaptVal] = useState(null)
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -55,7 +57,8 @@ export const ContactUs = () => {
           />
           <label>Message</label>
           <textarea placeholder="Message..." className="area" name="message" />
-          <input className="form-submit" type="submit" value="Send" />
+          {/* <ReCAPTCHA sitekey="" onChange={(val:any) => setCaptVal(val)} /> */}
+          <input className="form-submit" disabled={!captVal} type="submit" value="Send" />
         </form>
       </div>
     </div>

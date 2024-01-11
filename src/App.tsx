@@ -3,7 +3,6 @@ import Home from "./components/HomeComponent/Home";
 import "./App.css";
 import About from "./components/AboutComponent/About";
 import { aboutMe, contact, projectsData } from "./data/db";
-// import Skills from "./components/Skills/Skills";
 import ProjectCard from "./components/ProjectsComponent/ProjectCard";
 import { ContactUs } from "./components/ContactComponent/Contact";
 import ThemeProvider from "./Hoc/ThemeProvider";

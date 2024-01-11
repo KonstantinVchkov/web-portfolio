@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../../styles/about.css";
 import { AboutBgTheme } from "../../utils/AboutTheme";
 import { AboutMe } from "../../types/ProjectTypes";
+import { motion } from "framer-motion";
 
 const About = ({
   firstParagraph,
@@ -30,9 +31,18 @@ const About = ({
     const newVisibleSkillsCount = visibleSkillsCount + 4;
     setVisibleSkillsCount(Math.min(newVisibleSkillsCount, skills.length));
   };
-  const skillsContainerStyle = {
-    height: isTabletMode ? `${visibleSkillsCount * 55}px` : "auto",
-    overflow: "hidden",
+  const defaultAnimations = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
   };
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
@@ -51,15 +61,27 @@ const About = ({
               <p className="about-wrapper__info-text">{fourthParagraph}</p>
             </div>
           </div>
-          <div className="skills" style={skillsContainerStyle}>
+          <div className="skills">
             <h2>Tech Skills</h2>
-            {skills
-              .slice(0, isTabletMode ? visibleSkillsCount : skills.length)
-              .map((skill, idx) => (
-                <p className={themeCn} key={idx}>
-                  {skill}
-                </p>
-              ))}
+            <motion.span
+              transition={{ staggerChildren: 0.1 }}
+              initial="hidden"
+              animate="visible"
+            >
+              {skills
+                .slice(0, isTabletMode ? visibleSkillsCount : skills.length)
+                .map((skill, idx) => (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 2 }}
+                    variants={defaultAnimations}
+                    className={`${themeCn} `}
+                    key={idx}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+            </motion.span>
           </div>
           {isTabletMode && visibleSkillsCount < skills.length && (
             <button

@@ -1,7 +1,7 @@
 export const routes = [
   {
     title: "Home",
-    hash: "hero",
+    hash: "#",
   },
   {
     title: "About",
@@ -11,10 +11,6 @@ export const routes = [
     title: "Projects",
     hash: "projects",
   },
-  // {
-  //   title: "Skills",
-  //   href: "skills",
-  // },
   {
     title: "Contact",
     hash: "contact",
