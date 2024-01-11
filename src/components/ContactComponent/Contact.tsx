@@ -7,7 +7,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
-  const [captVal,setCaptVal] = useState(null)
+  const [captVal, setCaptVal] = useState(null);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -58,8 +58,22 @@ export const ContactUs = () => {
             required
           />
           <label>Message</label>
-          <textarea placeholder="Message..." className="area" required name="message" />
-          <input className="form-submit" disabled={!captVal} type="submit" value="Send" />
+          <textarea
+            placeholder="Message..."
+            className="area"
+            required
+            name="message"
+          />
+          <ReCAPTCHA
+            sitekey="6Lex3U0pAAAAAPigCGy80GZpLUf2zrPdqE-LNKSC"
+            onChange={(val: any) => setCaptVal(val)}
+          />
+          <input
+            className="form-submit"
+            disabled={!captVal}
+            type="submit"
+            value="Send"
+          />
         </form>
       </div>
     </div>
