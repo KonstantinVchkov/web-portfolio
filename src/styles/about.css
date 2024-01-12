@@ -33,7 +33,7 @@
   width: 100%;
 }
 .logo img {
-  width: 500px;
+  width: 300px;
 }
 @media (max-width: 800px) {
   #about {
