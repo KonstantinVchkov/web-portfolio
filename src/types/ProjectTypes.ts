@@ -3,7 +3,7 @@ export type IProject = {
   tech: string[];
   description: string;
   handleClick?: () => void;
-  linkcode?: string;
+  linkcode: string;
   showLive?: string;
   imgsrc?: string;
 };

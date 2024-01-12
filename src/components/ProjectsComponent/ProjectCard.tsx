@@ -35,7 +35,7 @@ const ProjectCard = ({
             rel="noreferrer"
             target="_blank"
             className="cta-btn cta-btn--hero"
-            href={showLive}
+            href={`${showLive}`}
           >
             See Live
           </a>
@@ -43,7 +43,7 @@ const ProjectCard = ({
             rel="noreferrer"
             target="_blank"
             className="cta-btn view-code cta-btn--hero"
-            href={linkcode}
+            href={`${linkcode}`}
           >
             Source Code
           </a>
