@@ -3,9 +3,7 @@ import { IProject } from "../../types/ProjectTypes";
 import "../../styles/project-card-style.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useThemeContext } from "../../context/ThemeContext";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 const ProjectCard = ({
   name,
   showLive,
