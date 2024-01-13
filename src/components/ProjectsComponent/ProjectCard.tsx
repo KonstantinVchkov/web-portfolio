@@ -3,12 +3,16 @@ import { IProject } from "../../types/ProjectTypes";
 import "../../styles/project-card-style.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useThemeContext } from "../../context/ThemeContext";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const ProjectCard = ({
   name,
   showLive,
   linkcode,
   description,
   tech,
+  image,
 }: IProject) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -22,7 +26,6 @@ const ProjectCard = ({
     <motion.div
       style={{
         scale: scaleProgress,
-        opacity: scrollYProgress,
       }}
       ref={ref}
       className={classes}
@@ -30,6 +33,9 @@ const ProjectCard = ({
       <div className="col-lg-4 my-4 col-sm-12">
         <div className="project-wrapper__text load-hidden">
           <h3 className="project-wrapper__text-title">{name}</h3>
+          <div className="image-property">
+            <img src={image} alt="" />
+          </div>
           <p className="my-4">{description}</p>
           <a
             rel="noreferrer"

@@ -5,7 +5,7 @@ export type IProject = {
   handleClick?: () => void;
   linkcode: string;
   showLive?: string;
-  imgsrc?: string;
+  image: string;
 };
 
 export type TNavbar = {
