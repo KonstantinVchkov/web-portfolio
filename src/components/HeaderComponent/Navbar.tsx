@@ -38,19 +38,13 @@ export const Navbar = ({
   };
   return (
     <div className="header">
-      {/* <div className="logo-header">
-      </div> */}
       <div className="social-media">
         <div ref={target} className="call-box">
           <IoIosCall
             className="call"
             onClick={() => setShowNumber(!showNumber)}
           />
-          {showNumber && (
-            <a href={`${mobile}`}>
-              <span className="number">{mobile}</span>
-            </a>
-          )}
+          {showNumber && <span className="number">{mobile}</span>}
         </div>
         <a href={`${instagram}`} target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
