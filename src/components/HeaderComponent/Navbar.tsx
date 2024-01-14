@@ -17,7 +17,6 @@ import { TNavbar } from "../../types/ProjectTypes";
 
 export const Navbar = ({
   mobile,
-  email,
   github,
   linkedIn,
   instagram,
