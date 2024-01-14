@@ -67,7 +67,7 @@ export const ContactUs = () => {
             name="message"
           />
           <ReCAPTCHA
-            sitekey="6Lea_U0pAAAAAFGhtqhoUxYDNCaerv1a0aovqght"
+            sitekey="6Lex3U0pAAAAAPigCGy80GZpLUf2zrPdqE-LNKSC"
             onChange={(val: string | null) => setCaptVal(val)}
           />
           <input
