@@ -35,14 +35,17 @@ const ProjectCard = ({
             <img src={image} alt="" />
           </div>
           <p className="my-4">{description}</p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className="cta-btn cta-btn--hero"
-            href={`${showLive}`}
-          >
-            See Live
-          </a>
+          {showLive && (
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className="cta-btn cta-btn--hero"
+              href={`${showLive}`}
+            >
+              See Live
+            </a>
+          )}
+
           <a
             rel="noreferrer"
             target="_blank"
