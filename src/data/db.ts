@@ -41,6 +41,7 @@ export const projectsData = [
     description:
       "Brainster Labs is a project on which we will place all the projects Brainster students (Design Academy, Coding Academy, Marketing Academy) have made.",
     image: "/assets/brainster-labs-phone-projects.png",
+    showLive:'https://65a537ee4ae50810333d4b82--effervescent-yeot-71cf4a.netlify.app/',
     linkcode: "https://github.com/KonstantinVchkov/Brainster-Labs.git",
   },
   {
