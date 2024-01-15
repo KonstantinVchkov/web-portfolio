@@ -69,7 +69,7 @@ export const projectsData = [
     image: "/assets/e-commerce-img.png",
     linkcode: "https://github.com/KonstantinVchkov/E-Commerce.git",
     showLive:
-      "https://e-commerce-qwh3usqkn-konstantins-projects-931f5081.vercel.app/",
+      "https://e-commerce-drab-three.vercel.app/",
   },
   {
     name: "Igralishte.Sk",
