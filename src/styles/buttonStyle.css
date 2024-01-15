@@ -55,7 +55,7 @@
 
 @media (max-width: 400px) {
   .cta-btn--hero:hover {
-    -webkit-text-fill-color: #0000ff;
+    -webkit-text-fill-color: #999999;
   }
 }
 
