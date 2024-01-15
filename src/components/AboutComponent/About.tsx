@@ -4,13 +4,7 @@ import { AboutBgTheme } from "../../utils/AboutTheme";
 import { AboutMe } from "../../types/ProjectTypes";
 import { motion } from "framer-motion";
 
-const About = ({
-  firstParagraph,
-  secondParagraph,
-  thirdParagraph,
-  fourthParagraph,
-  skills,
-}: AboutMe) => {
+const About = ({ skills, paragraphs }: AboutMe) => {
   const { aboutBgTheme, themeCn } = AboutBgTheme();
   const [visibleSkillsCount, setVisibleSkillsCount] = useState(4);
   const [isTabletMode, setIsTabletMode] = useState(false);
@@ -55,10 +49,11 @@ const About = ({
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info load-hidden">
               <span className="icon">👨🏻‍💻</span>
-              <p className="about-wrapper__info-text">{firstParagraph}</p>
-              <p className="about-wrapper__info-text">{secondParagraph}</p>
-              <p className="about-wrapper__info-text">{thirdParagraph}</p>
-              <p className="about-wrapper__info-text">{fourthParagraph}</p>
+              {paragraphs.map((paragraph, idx) => (
+                <p key={idx} className="about-wrapper__info-text">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
           <div className="skills">

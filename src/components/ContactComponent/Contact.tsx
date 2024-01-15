@@ -41,7 +41,7 @@ export const ContactUs = () => {
         <LottieAnimation animationData={AnimationJson} />
       </div>
       <div className="ContactUs">
-        <h1 className="title text-center mb-4">Talk to Us</h1>
+        <h1 className="title text-center mb-4">Talk to Me</h1>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
           <input

@@ -16,14 +16,12 @@ export const aboutMe = {
     "EXPRESS JS",
     "MONGO DB",
   ],
-  firstParagraph:
+  paragraphs: [
     "As a Front-end Developer, I am dedicated to crafting intuitive and engaging digital interfaces. My involvement in frontend territory has been enhanced by hands-on proficiency in HTML5, CSS3, SASS, BOOTSTRAP, JavaScript, JQUERY, TypeScript, React, Next Js, NodeJs, Express Js and MongoDb - skills honed through intensive training and tangible projects.",
-  secondParagraph:
     "In a world where tech is continuously changing and improving, I strive to stay ahead, by enhancing my knowledge and skill, allowing me to implement the latest frontend advancements in my work.",
-  thirdParagraph:
     "My proficiency in this field is further enhanced by my proactive attitude and a team-first work ethic, with clear communication and adept problem-solving being some of the key aspects for my success. I enjoy a good challenge, allowing me to test and amplify both my knowledge and expertise as I play my role in the dynamic world of frontend design.",
-  fourthParagraph:
     "My thirst for innovation makes me very enthusiastic about how the frontend world will evolve.  With my blend of creativity and tech know-how, I am ready for any exciting projects that reshape how users interact with the digital realm.",
+  ],
 };
 
 export const contact = {
@@ -45,7 +43,15 @@ export const projectsData = [
   },
   {
     name: "Street Artists",
-    tech: ["HTML", "CSS", "BOOTSTRAP", "JAVASCRIPT"],
+    tech: [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JAVASCRIPT",
+      "Chart Js",
+      "Ajax",
+      "Web API - Media Devices - Camera",
+    ],
     description:
       "Mobile web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
     image: "/assets/street-artist.png",
@@ -104,6 +110,24 @@ export const projectsData = [
       "Marinov Design is a bespoke e-commerce platform I developed, showcasing unique handcrafted jewelry and home decor. This project was an exciting opportunity to blend artistic content with cutting-edge web technologies, creating a unique online shopping experience that emphasizes craftsmanship and uniqueness",
     image: "/assets/marinov-design.png",
     linkcode: "https://github.com/KonstantinVchkov/marinov-design.git",
+  },
+  {
+    name: "Vchkov Dev",
+    tech: [
+      "React.js",
+      "Typescript",
+      "lottie-web",
+      "framer-motion",
+      "react-scroll",
+      "react-typewriter",
+      "Context Api",
+      "Email.Js",
+    ],
+    description:
+      "My personal portfolio website to provide professional information about myself, also representation of work i have created, as well as my skills and experiences",
+    image: "/assets/vchkov-portfolio-img.png",
+    linkcode: "https://github.com/KonstantinVchkov/web-portfolio.git",
+    showLive: "https://vchkov.dev/",
   },
 ];
 export const sentences = [

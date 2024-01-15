@@ -17,9 +17,6 @@ export type TNavbar = {
   facebook: string;
 };
 export type AboutMe = {
-  firstParagraph: string;
-  secondParagraph: string;
-  thirdParagraph: string;
-  fourthParagraph: string;
+  paragraphs: string[];
   skills: string[];
 };
