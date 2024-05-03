@@ -3,9 +3,9 @@ export type IProject = {
   tech: string[];
   description: string;
   handleClick?: () => void;
-  linkcode: string;
+  linkcode?: string;
   showLive?: string;
-  image: string;
+  image?: string;
 };
 
 export type TNavbar = {
