@@ -16,13 +16,14 @@ export const aboutMe = {
     "Next.Js",
     "Node Js",
     "Express Js",
-    "Mongo Db",
+    "PostgreSQL",
+    "Mongo Db"
   ],
   paragraphs: [
-    "As a Front-end Developer, I specialize in creating user-friendly and captivating digital interfaces. My experience in the frontend domain has been enriched through practical expertise gained in the development of various projects.",
-    "In a world where tech is continuously changing and improving, I strive to stay ahead, by enhancing my knowledge and skill, allowing me to implement the latest frontend advancements in my work.",
-    "My proficiency in this field is further enhanced by my proactive attitude and a team-first work ethic, with clear communication and adept problem-solving being some of the key aspects for my success. I enjoy a good challenge, allowing me to test and amplify both my knowledge and expertise as I play my role in the dynamic world of frontend design.",
-    "My thirst for innovation makes me very enthusiastic about how the frontend world will evolve.  With my blend of creativity and tech know-how, I am ready for any exciting projects that reshape how users interact with the digital realm.",
+    "As a full-stack developer, I specialize in creating seamless digital experiences from front to back. My journey in the frontend and backend domains has been shaped by hands-on experience gained from a variety of projects.",
+    "In a world where tech is continuously changing and improving, I strive to stay ahead, by enhancing my knowledge and skill, allowing me to implement the latest advancements in both frontend and backend development into my work.",
+    "My proficiency in this field is further enhanced by my proactive attitude and a team-first work ethic, with clear communication and adept problem-solving being some of the key aspects for my success. I enjoy a good challenge, allowing me to test and amplify both my knowledge and expertise as I play my role in the dynamic world of full-stack development",
+    "My thirst for innovation makes me very enthusiastic about how the Software Development world will evolve.  With my blend of creativity and tech know-how, I am ready for any exciting projects that reshape how users interact with the digital realm.",
   ],
 };
 
@@ -132,12 +133,50 @@ export const projectsData = [
     linkcode: "https://github.com/KonstantinVchkov/web-portfolio.git",
     showLive: "https://vchkov.dev/",
   },
+  {
+    name: "Vesna-Dent",
+    tech: [
+      "Next.js",
+      "Typescript",
+      "lottie-react",
+      "react-countup",
+      "react-dom",
+      "react-icons",
+      "Swiper",
+    ],
+    description:
+      "Web application for Vesna-Dent, a modern dental office dedicated to providing exceptional patient care through a seamless online experience. This app is still under construction",
+    image: "/assets/vesna-dent.png",
+    linkcode: "https://github.com/KonstantinVchkov/vesna-dent.git",
+    showLive: "https://vesna-dent.vercel.app/",
+  },
+  {
+    name: "optiCV",
+    tech: [
+      "React.js",
+      "Vite",
+      "Typescript",
+      "React-Query",
+      "Tailwind-Css",
+      "Adblock-detect-react",
+      "Axios",
+      "Classnames",
+      "Crypto-js",
+      "React-dropzone",
+      "React-router-dom",
+    ],
+    description:
+      "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming. This app is still under construction",
+    image: "/assets/optiCV.png",
+  },
 ];
 export const sentences = [
-  "Front-End Developer",
+  "Full-Stack Developer",
   "React.Js",
   "React Native",
   "Next.Js",
   "Node.Js",
+  "Express.Js",
+  "PostgreSQL",
 ];
 // Macedonian Version
