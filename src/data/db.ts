@@ -16,7 +16,8 @@ export const aboutMe = {
     "Next.Js",
     "Node Js",
     "Express Js",
-    "Mongo Db",
+    "PostgreSQL",
+    "Mongo Db"
   ],
   paragraphs: [
     "As a Front-end Developer, I specialize in creating user-friendly and captivating digital interfaces. My experience in the frontend domain has been enriched through practical expertise gained in the development of various projects.",
@@ -113,6 +114,41 @@ export const projectsData = [
       "Marinov Design is a bespoke e-commerce platform I developed, showcasing unique handcrafted jewelry and home decor. This project was an exciting opportunity to blend artistic content with cutting-edge web technologies, creating a unique online shopping experience that emphasizes craftsmanship and uniqueness",
     image: "/assets/marinov-design.png",
     linkcode: "https://github.com/KonstantinVchkov/marinov-design.git",
+  },
+  {
+    name: "Vchkov Dev",
+    tech: [
+      "React.js",
+      "Typescript",
+      "lottie-web",
+      "framer-motion",
+      "react-scroll",
+      "react-typewriter",
+      "Context Api",
+      "Email.Js",
+    ],
+    description:
+      "My personal portfolio website to provide professional information about myself, also representation of work i have created, as well as my skills and experiences",
+    image: "/assets/vchkov-portfolio-img.png",
+    linkcode: "https://github.com/KonstantinVchkov/web-portfolio.git",
+    showLive: "https://vchkov.dev/",
+  },
+  {
+    name: "Vesna-Dent",
+    tech: [
+      "Next.js",
+      "Typescript",
+      "lottie-react",
+      "react-countup",
+      "react-dom",
+      "react-icons",
+      "Swiper",
+    ],
+    description:
+      "Web application for Vesna-Dent, a modern dental office dedicated to providing exceptional patient care through a seamless online experience.",
+    image: "/assets/vesna-dent.png",
+    linkcode: "https://github.com/KonstantinVchkov/vesna-dent.git",
+    showLive: "https://vesna-dent.vercel.app/",
   },
   {
     name: "Vchkov Dev",
