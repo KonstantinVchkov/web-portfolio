@@ -39,7 +39,7 @@ export const ContactUs = () => {
 
       form.current?.reset();
       console.log("this is from result", result.text);
-      return result.text
+      return result.text;
     } catch (error) {
       console.error(error);
       console.log("Message did not send");
