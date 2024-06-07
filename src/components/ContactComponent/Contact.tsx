@@ -84,7 +84,7 @@ export const ContactUs = () => {
           />
           <input
             className="form-submit"
-            // disabled={!captVal}
+            disabled={!captVal}
             type="submit"
             value="Send"
           />
