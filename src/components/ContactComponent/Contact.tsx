@@ -16,7 +16,19 @@ export const ContactUs = () => {
       console.log("reCAPTCHA verification failed");
       return;
     }
+    const emailInput = form.current?.querySelector(
+      'input[name="user_email"]'
+    ) as HTMLInputElement | null;
+    if (!emailInput) {
+      console.log("Email input not found");
+      return;
+    }
 
+    const email = emailInput.value;
+    if (email === "konstantin.vchkov@gmail.com") {
+      console.log("Cannot send emails from your own address");
+      return;
+    }
     try {
       const result = await emailjs.sendForm(
         "service_nm52xhq",
@@ -26,8 +38,8 @@ export const ContactUs = () => {
       );
 
       form.current?.reset();
-      console.log(result.text);
-      console.log("Message successfully sent");
+      console.log("this is from result", result.text);
+      return result.text;
     } catch (error) {
       console.error(error);
       console.log("Message did not send");
