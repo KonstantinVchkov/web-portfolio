@@ -9,6 +9,7 @@ export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
   const [captVal, setCaptVal] = useState<string | null>(null);
   const [email, setEmail] = useState<boolean>(false)
+  const restrictedEmails = ["konstantin.vchkov@gmail.com", "kvckov@yahoo.com"];
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -23,9 +24,9 @@ export const ContactUs = () => {
       console.log("Email input not found");
       return;
     }
-
+    
     const email = emailInput.value;
-    if (email === "konstantin.vchkov@gmail.com") {
+    if (restrictedEmails.includes(email)) {
       console.log("Cannot send emails from your own address");
       return setEmail(true)
     }
