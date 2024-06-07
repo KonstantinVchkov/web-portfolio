@@ -8,7 +8,7 @@ import "../../styles/contact-style.css";
 export const ContactUs = () => {
   const form = React.createRef<HTMLFormElement>();
   const [captVal, setCaptVal] = useState<string | null>(null);
-
+  const [email, setEmail] = useState<boolean>(false)
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ export const ContactUs = () => {
     const email = emailInput.value;
     if (email === "konstantin.vchkov@gmail.com") {
       console.log("Cannot send emails from your own address");
-      return;
+      return setEmail(true)
     }
     try {
       const result = await emailjs.sendForm(
@@ -38,7 +38,6 @@ export const ContactUs = () => {
       );
 
       form.current?.reset();
-      console.log("this is from result", result.text);
       return result.text;
     } catch (error) {
       console.error(error);
@@ -89,6 +88,7 @@ export const ContactUs = () => {
             value="Send"
           />
         </form>
+        {email && <p>Please put your own email client.</p>}
       </div>
     </div>
   );
