@@ -14,7 +14,6 @@ function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-  console.log("from contact: ", contact);
   return (
     <div className="App">
       <Analytics />
