@@ -1,3 +1,10 @@
+export type TScrollBtn = {
+  handleScroll: () => void;
+};
+export interface DefaultContextValues {
+  toggleTheme: () => void
+  theme: 'light' | 'dark'
+}
 export type IProject = {
   name?: string;
   tech: string[];

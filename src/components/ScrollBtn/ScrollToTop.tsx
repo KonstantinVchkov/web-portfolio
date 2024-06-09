@@ -1,31 +1,16 @@
-import  { useEffect, useState } from "react";
 import "../../styles/scroll-to-top-style.css";
 import { IoIosArrowUp } from "react-icons/io";
-type TScrollBtn = {
-  handleScroll: () => void;
-};
-const ScrollButton = ({ handleScroll }: TScrollBtn) => {
-  const [showScroll, setShowScroll] = useState<boolean>(false);
-  const toggleVisibility = () => {
-    if (window.scrollY > 500) {
-      setShowScroll(true);
-    } else {
-      setShowScroll(false);
-    }
-  };
+import { TScrollBtn } from "../../types/ProjectTypes";
+import useHeader from "../../hooks/useHeader";
 
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
+const ScrollButton = ({ handleScroll }: TScrollBtn) => {
+  const { showScroll } = useHeader();
   return (
     <>
       {showScroll && (
-      <div className="scroll-top-btn">
-        <IoIosArrowUp onClick={handleScroll} />
-      </div>
+        <div className="scroll-top-btn">
+          <IoIosArrowUp onClick={handleScroll} />
+        </div>
       )}
     </>
   );
