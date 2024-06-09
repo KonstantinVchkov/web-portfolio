@@ -1,50 +1,11 @@
-import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 import LottieAnimation from "./LottieAnimation";
 import ReCAPTCHA from "react-google-recaptcha";
 import AnimationJson from "./lottie-web/mail-animation.json";
 import "../../styles/contact-style.css";
+import useContactForm from "../../hooks/useContactForm";
 
 export const ContactUs = () => {
-  const form = React.createRef<HTMLFormElement>();
-  const [captVal, setCaptVal] = useState<string | null>(null);
-  const [email, setEmail] = useState<boolean>(false)
-  const restrictedEmails = ["konstantin.vchkov@gmail.com", "kvckov@yahoo.com"];
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!captVal) {
-      console.log("reCAPTCHA verification failed");
-      return;
-    }
-    const emailInput = form.current?.querySelector(
-      'input[name="user_email"]'
-    ) as HTMLInputElement | null;
-    if (!emailInput) {
-      console.log("Email input not found");
-      return;
-    }
-    
-    const email = emailInput.value;
-    if (restrictedEmails.includes(email)) {
-      console.log("Cannot send emails from your own address");
-      return setEmail(true)
-    }
-    try {
-      const result = await emailjs.sendForm(
-        "service_nm52xhq",
-        "template_ymulrnh",
-        form.current as HTMLFormElement,
-        "nBfZtl55pbf0eir-4"
-      );
-
-      form.current?.reset();
-      return result.text;
-    } catch (error) {
-      console.error(error);
-      console.log("Message did not send");
-    }
-  };
+  const { setCaptVal, email, sendEmail, form, captVal } = useContactForm();
 
   return (
     <div id="contact" className="ContactForm">
@@ -71,6 +32,10 @@ export const ContactUs = () => {
             type="email"
             name="user_email"
           />
+          {email && (
+            <p className="emailError">Please put your own email client.</p>
+          )}
+
           <label>Message</label>
           <textarea
             placeholder="Message..."
@@ -89,7 +54,6 @@ export const ContactUs = () => {
             value="Send"
           />
         </form>
-        {email && <p>Please put your own email client.</p>}
       </div>
     </div>
   );
