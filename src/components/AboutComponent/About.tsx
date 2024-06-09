@@ -1,43 +1,13 @@
-import { useEffect, useState } from "react";
 import "../../styles/about.css";
 import { AboutBgTheme } from "../../utils/AboutTheme";
 import { AboutMe } from "../../types/ProjectTypes";
 import { motion } from "framer-motion";
+import useAboutMe from "../../hooks/useAboutMe";
 
 const About = ({ skills, paragraphs }: AboutMe) => {
   const { aboutBgTheme, themeCn } = AboutBgTheme();
-  const [visibleSkillsCount, setVisibleSkillsCount] = useState(4);
-  const [isTabletMode, setIsTabletMode] = useState(false);
-
-  useEffect(() => {
-    updateTabletMode();
-    window.addEventListener("resize", updateTabletMode);
-    return () => {
-      window.removeEventListener("resize", updateTabletMode);
-    };
-  }, []);
-
-  const updateTabletMode = () => {
-    setIsTabletMode(window.innerWidth <= 800);
-  };
-
-  const handleDrop = () => {
-    const newVisibleSkillsCount = visibleSkillsCount + 4;
-    setVisibleSkillsCount(Math.min(newVisibleSkillsCount, skills.length));
-  };
-  const defaultAnimations = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
+  const { isTabletMode, handleDrop, visibleSkillsCount, defaultAnimations } =
+    useAboutMe();
   return (
     <div id="about" style={{ background: aboutBgTheme }}>
       <div className="container d-flex justify-content-center align-center flex-column">
@@ -80,7 +50,7 @@ const About = ({ skills, paragraphs }: AboutMe) => {
           </div>
           {isTabletMode && visibleSkillsCount < skills.length && (
             <button
-              onClick={handleDrop}
+              onClick={() => handleDrop(skills)}
               className="cta-btn about-btn cta-btn--hero"
             >
               Show More
