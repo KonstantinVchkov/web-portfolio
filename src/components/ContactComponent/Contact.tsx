@@ -7,6 +7,9 @@ import useContactForm from "../../hooks/useContactForm";
 export const ContactUs = () => {
   const { setCaptVal, email, sendEmail, form, captVal } = useContactForm();
   const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || '';
+  if (!siteKey) {
+    console.error('Missing reCAPTCHA site key');
+  }
   return (
     <div id="contact" className="ContactForm">
       <div className="Animation">
