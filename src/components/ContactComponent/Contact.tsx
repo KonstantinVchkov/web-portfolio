@@ -44,7 +44,7 @@ export const ContactUs = () => {
             name="message"
           />
           <ReCAPTCHA
-            sitekey={`${process.env.GOOGLE_SECRET_KEY}`}
+            sitekey="6LeD6U0pAAAAAOoipxo_JEHn2VE3kPuiCblIi9fx"
             onChange={(val: string | null) => setCaptVal(val)}
           />
           <input
