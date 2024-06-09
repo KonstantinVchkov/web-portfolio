@@ -1,8 +1,7 @@
-import { useRef } from "react";
 import { IProject } from "../../types/ProjectTypes";
 import "../../styles/project-card-style.css";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useThemeContext } from "../../context/ThemeContext";
+import { motion } from "framer-motion";
+import useProjectsCards from "../../hooks/useProjectsCards";
 
 const ProjectCard = ({
   name,
@@ -12,14 +11,7 @@ const ProjectCard = ({
   tech,
   image,
 }: IProject) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  const { theme } = useThemeContext();
-  const classes = theme === "light" ? "project-card" : "project-card-dark";
+  const { scaleProgress, classes, ref } = useProjectsCards();
   return (
     <motion.div
       style={{

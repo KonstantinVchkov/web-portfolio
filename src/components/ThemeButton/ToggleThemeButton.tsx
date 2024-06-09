@@ -1,11 +1,10 @@
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useHeader from "../../hooks/useHeader";
 import { useThemeContext } from "../../context/ThemeContext";
 
 const ToggleThemeButton = () => {
-  const { theme, toggleTheme } = useThemeContext();
-  const icon = theme === "light" ? faMoon : faSun;
-
+  const { icon } = useHeader();
+  const { toggleTheme } = useThemeContext();
   return (
     <FontAwesomeIcon
       className="themeBtn"

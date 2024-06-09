@@ -1,13 +1,9 @@
-import { createContext, useContext } from 'react'
-
-interface DefaultContextValues {
-  toggleTheme: () => void
-  theme: 'light' | 'dark'
-}
+import { createContext, useContext } from "react";
+import { DefaultContextValues } from "../types/ProjectTypes";
 
 export const ThemeContext = createContext<DefaultContextValues>({
   toggleTheme: () => {},
-  theme: 'light'
-})
+  theme: "light",
+});
 
-export const useThemeContext = () => useContext(ThemeContext)
+export const useThemeContext = () => useContext(ThemeContext);
