@@ -6,10 +6,7 @@ import useContactForm from "../../hooks/useContactForm";
 
 export const ContactUs = () => {
   const { setCaptVal, email, sendEmail, form, captVal } = useContactForm();
-  const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || '';
-  if (!siteKey) {
-    console.error('Missing reCAPTCHA site key');
-  }
+
   return (
     <div id="contact" className="ContactForm">
       <div className="Animation">
@@ -35,10 +32,6 @@ export const ContactUs = () => {
             type="email"
             name="user_email"
           />
-          {email && (
-            <p className="emailError">Please put your own email client.</p>
-          )}
-
           <label>Message</label>
           <textarea
             placeholder="Message..."
@@ -47,7 +40,7 @@ export const ContactUs = () => {
             name="message"
           />
           <ReCAPTCHA
-            sitekey={siteKey}
+            sitekey="6LeD6U0pAAAAAOoipxo_JEHn2VE3kPuiCblIi9fx"
             onChange={(val: string | null) => setCaptVal(val)}
           />
           <input
@@ -57,6 +50,7 @@ export const ContactUs = () => {
             value="Send"
           />
         </form>
+        {email && <p className="emailError">Please put your own email client.</p>}
       </div>
     </div>
   );
