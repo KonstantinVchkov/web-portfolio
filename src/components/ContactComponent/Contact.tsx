@@ -6,7 +6,7 @@ import useContactForm from "../../hooks/useContactForm";
 
 export const ContactUs = () => {
   const { setCaptVal, email, sendEmail, form, captVal } = useContactForm();
-  const env = process.env.GOOGLE_RECAPTCHA_KEY
+  const RECAPTCHA_KEY = process.env.REACT_APP_SITE_RECAPTCHA_KEY || "";
   return (
     <div id="contact" className="ContactForm">
       <div className="Animation">
@@ -44,7 +44,7 @@ export const ContactUs = () => {
             name="message"
           />
           <ReCAPTCHA
-            sitekey={`${env}`}
+            sitekey={RECAPTCHA_KEY}
             onChange={(val: string | null) => setCaptVal(val)}
           />
           <input
