@@ -41,7 +41,7 @@ export const projectsData = [
     tech: ["HTML", "CSS", "JAVASCRIPT", "Bootstrap"],
     description:
       "Brainster Labs is a project on which we will place all the projects Brainster students (Design Academy, Coding Academy, Marketing Academy) have made.",
-    image: "/assets/brainster-labs-phone-projects.png",
+    image: "/assets/brainster_labs.png",
     showLive:'https://65a537ee4ae50810333d4b82--effervescent-yeot-71cf4a.netlify.app/',
     linkcode: "https://github.com/KonstantinVchkov/Brainster-Labs.git",
   },
@@ -58,7 +58,7 @@ export const projectsData = [
     ],
     description:
       "Mobile web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
-    image: "/assets/street-artist.png",
+    image: "/assets/street_artist.png",
     linkcode: "https://github.com/KonstantinVchkov/Street-Artists.git",
     showLive: "https://street-artist-brainster-project.netlify.app/",
   },
@@ -67,7 +67,7 @@ export const projectsData = [
     tech: ["React.Js", "SASS", "Styled Components", "Redux", "Firebase"],
     description:
       "Developed a fashion-focused e-commerce app using React.js, featuring an intuitive interface with Firebase backend for secure transactions. Enhanced with SASS, styled components, and Redux for visual appeal and performance, it merges fashion with advanced web technology.",
-    image: "/assets/e-commerce-img.png",
+    image: "/assets/ecommerce_web_app.png",
     linkcode: "https://github.com/KonstantinVchkov/E-Commerce.git",
     showLive:
       "https://e-commerce-drab-three.vercel.app/",

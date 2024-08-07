@@ -2,11 +2,14 @@
   background-color: white;
   margin-top: -10rem;
   padding-top: 15rem;
+  margin-bottom: 15rem;
 }
+
 .view-code {
   margin-left: 3px;
   cursor: pointer;
 }
+
 .project-card,
 .project-card-dark {
   width: 500px;
@@ -22,9 +25,13 @@
 .project-wrapper__text .images {
   position: relative;
 }
+
 .project-wrapper__text .image-property {
   width: 300px;
   margin: 5px auto;
+}
+.image-property img{
+  border-radius:10px;
 }
 .project-wrapper__text .image-property img {
   width: 100%;
@@ -35,6 +42,7 @@
   width: 100%;
   height: 100%;
 }
+
 .tech-stacks {
   display: flex;
   flex-wrap: wrap;
@@ -42,31 +50,32 @@
   align-items: center;
   justify-content: center;
 }
+
 .tech {
   margin: 10px 10px;
   padding: 5px 10px;
   box-shadow: -1px 1px 12px -1px rgba(0, 0, 0, 0.54);
-  color: #999999;
+  color:  #a9a9a9;
 }
+
 @media only screen and (max-width: 900px) {
-  /* tab-land breakpoint */
   .projects {
     margin-top: 0;
     padding-top: 5rem;
   }
 }
 
-.project-wrapper {
-  margin-bottom: 15rem;
-}
-
 @media only screen and (max-width: 600px) {
-  /* phone breakpoint */
   .tech {
     width: 40%;
   }
+
   .project-wrapper {
     margin-bottom: 0rem;
+  }
+
+  .project-wrapper__text {
+    margin-bottom: 2.5rem !important;
   }
 }
 
@@ -75,7 +84,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* phone breakpoint */
   .project-wrapper .row {
     margin-bottom: 4rem;
   }
@@ -85,19 +93,13 @@
   text-align: center;
   margin: 10px auto;
 }
+
 .project-wrapper__text p {
   width: 300px;
   margin: 10px auto;
 }
-@media only screen and (max-width: 600px) {
-  /* phone breakpoint */
-  .project-wrapper__text {
-    margin-bottom: 2.5rem !important;
-  }
-}
 
 @media only screen and (max-width: 900px) {
-  /* tab-land breakpoint */
   .project-wrapper__text {
     margin-bottom: 4.8rem;
   }
@@ -113,14 +115,13 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* phone breakpoint */
   .project-wrapper__text-title {
     font-size: 2rem;
   }
 }
 
 .project-wrapper__text p > a {
-  color: blue; /* Assuming $secondary-color is blue */
+  color: blue;
 }
 
 .project-wrapper__image {
@@ -129,7 +130,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  /* tab-land breakpoint */
   .project-wrapper__image {
     width: 100%;
     margin: 0;
@@ -146,14 +146,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* phone breakpoint */
   .project-wrapper__image .thumbnail {
     border: 1px solid lightgrey;
     box-shadow: none;
     margin-bottom: 3.2rem;
   }
 }
-/* Dark Navigation project cards */
 
 .project-card-dark {
   background: radial-gradient(

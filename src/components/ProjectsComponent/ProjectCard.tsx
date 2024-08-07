@@ -1,6 +1,5 @@
 import { IProject } from "../../types/ProjectTypes";
 import "../../styles/project-card-style.css";
-import { motion } from "framer-motion";
 import useProjectsCards from "../../hooks/useProjectsCards";
 
 const ProjectCard = ({
@@ -11,20 +10,14 @@ const ProjectCard = ({
   tech,
   image,
 }: IProject) => {
-  const { scaleProgress, classes, ref } = useProjectsCards();
+  const {classes} = useProjectsCards()
   return (
-    <motion.div
-      style={{
-        scale: scaleProgress,
-      }}
-      ref={ref}
-      className={classes}
-    >
+    <div className={`${classes}`}>
       <div className="col-lg-4 my-4 col-sm-12">
-        <div className="project-wrapper__text load-hidden">
+        <div className="project-wrapper__text">
           <h3 className="project-wrapper__text-title">{name}</h3>
           <div className="image-property">
-            <img src={image} alt="" />
+            <img src={image} alt="project-info-img" />
           </div>
           <p className="my-4">{description}</p>
           {showLive && (
@@ -32,7 +25,7 @@ const ProjectCard = ({
               rel="noreferrer"
               target="_blank"
               className="cta-btn cta-btn--hero"
-              href={`${showLive}`}
+              href={showLive}
             >
               See Live
             </a>
@@ -43,7 +36,7 @@ const ProjectCard = ({
               rel="noreferrer"
               target="_blank"
               className="cta-btn view-code cta-btn--hero"
-              href={`${linkcode}`}
+              href={linkcode}
             >
               Source Code
             </a>
@@ -58,7 +51,7 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
