@@ -169,7 +169,7 @@ export const projectsData = [
       "postgreSQL",
     ],
     description:
-      "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming. This app is still under construction",
+      "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming.",
     image: "/assets/optiCV.png",
     showLive: "https://opticv.net/",
   },
