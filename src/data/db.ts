@@ -169,9 +169,23 @@ export const projectsData = [
       "postgreSQL",
     ],
     description:
-      "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming. This app is still under construction",
+      "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming.",
     image: "/assets/optiCV.png",
     showLive: "https://opticv.net/",
+  },
+  {
+    name: "Nexiora",
+    tech: [
+      "React.js",
+      "Vite",
+      "Typescript",
+      "Tailwind-Css",
+      "Framer-motion"
+    ],
+    description:
+      "As part of my work with Nexiora, I developed an informational web application that highlights the diverse skills and capabilities of the company. This application serves as a testament to Nexiora's commitment to technological excellence and strategic foresight. It exemplifies my ability to create solutions that not only showcase a company's strengths but also align with their innovative vision and operational goals.",
+    image: "/assets/nexiora_frame.png",
+    showLive: "https://nexiora.net/",
   },
 ];
 export const sentences = [

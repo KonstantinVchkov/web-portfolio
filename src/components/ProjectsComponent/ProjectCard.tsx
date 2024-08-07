@@ -38,14 +38,16 @@ const ProjectCard = ({
             </a>
           )}
 
-          <a
-            rel="noreferrer"
-            target="_blank"
-            className="cta-btn view-code cta-btn--hero"
-            href={`${linkcode}`}
-          >
-            Source Code
-          </a>
+          {linkcode && (
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className="cta-btn view-code cta-btn--hero"
+              href={`${linkcode}`}
+            >
+              Source Code
+            </a>
+          )}
         </div>
       </div>
       <h2>Tech Stack Used:</h2>
