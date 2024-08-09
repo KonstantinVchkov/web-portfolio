@@ -13,9 +13,7 @@ const About = ({ skills, paragraphs }: AboutMe) => {
       <div className="container d-flex justify-content-center align-center flex-column">
         <h2 className="section-title load-hidden">About me</h2>
         <div className="row about-wrapper">
-          <div className="col-md-6 logo">
-            <img src="/assets/logo-vchkov-dev.png" alt="" />
-          </div>
+
           <div className="col-md-6 col-sm-12">
             <div className="about-wrapper__info load-hidden">
               <span className="icon">👨🏻‍💻</span>

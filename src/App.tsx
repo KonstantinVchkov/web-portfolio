@@ -28,20 +28,22 @@ function App() {
         <About {...aboutMe} />
         <div id="projects" className="projects">
           <Swiper
-           effect={'coverflow'}
-           grabCursor={true}
-           centeredSlides={true}
-           slidesPerView={'auto'}
-           coverflowEffect={{
-             rotate: 50,
-             stretch: 0,
-             depth: 100,
-             modifier: 1,
-             slideShadows: true,
-           }}
-           pagination={true}
-           modules={[EffectCoverflow, Pagination]}
-           className="mySwiper"
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 1,
+              depth: 150,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
           >
             {projectsData.map((project, idx) => (
               <SwiperSlide key={idx}>
