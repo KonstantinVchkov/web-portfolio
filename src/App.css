@@ -34,13 +34,10 @@
 .App-link {
   color: #61dafb;
 }
-
-
-.projects{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 10px 0px;
+@media (max-width:800px){
+  .mySwiper{
+    width:80%;
+  }
 }
 @keyframes App-logo-spin {
   from {

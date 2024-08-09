@@ -41,7 +41,6 @@ export const projectsData = [
     tech: ["HTML", "CSS", "JAVASCRIPT", "Bootstrap"],
     description:
       "Brainster Labs is a project on which we will place all the projects Brainster students (Design Academy, Coding Academy, Marketing Academy) have made.",
-    image: "/assets/brainster-labs-phone-projects.png",
     showLive:'https://65a537ee4ae50810333d4b82--effervescent-yeot-71cf4a.netlify.app/',
     linkcode: "https://github.com/KonstantinVchkov/Brainster-Labs.git",
   },
@@ -58,7 +57,6 @@ export const projectsData = [
     ],
     description:
       "Mobile web space for every street artist that will allow them to be able to track their income, and to have a place on the web where they can showcase their masterpieces.",
-    image: "/assets/street-artist.png",
     linkcode: "https://github.com/KonstantinVchkov/Street-Artists.git",
     showLive: "https://street-artist-brainster-project.netlify.app/",
   },
@@ -67,7 +65,6 @@ export const projectsData = [
     tech: ["React.Js", "SASS", "Styled Components", "Redux", "Firebase"],
     description:
       "Developed a fashion-focused e-commerce app using React.js, featuring an intuitive interface with Firebase backend for secure transactions. Enhanced with SASS, styled components, and Redux for visual appeal and performance, it merges fashion with advanced web technology.",
-    image: "/assets/e-commerce-img.png",
     linkcode: "https://github.com/KonstantinVchkov/E-Commerce.git",
     showLive:
       "https://e-commerce-drab-three.vercel.app/",
@@ -85,7 +82,6 @@ export const projectsData = [
     ],
     description:
       "Created an online platform for a vintage women's clothing store using NextJS and jsonserver, incorporating e-commerce features and a mock REST API. This project, part ofmy academic work, combined aesthetic design with functional back-end structures using NodeJS and related packages.",
-    image: "/assets/igralishte-sk.png",
     linkcode: "https://github.com/KonstantinVchkov/igralishte.git",
     showLive: "https://igralishte.vercel.app/",
   },
@@ -104,7 +100,6 @@ export const projectsData = [
     ],
     description:
       "Contributed to a multi-disciplinary team developing an app for identifying air pollution hotspots, aimed at promoting environmental consciousness. My role focused on designing responsive user interfaces with Next.js, ensuring seamless integration with back-end systems. The app successfully heightened public awareness about air pollution.",
-    image: "/assets/breathe-mk.png",
     linkcode: "https://github.com/KonstantinVchkov/breathe.mk.git",
   },
   {
@@ -129,7 +124,6 @@ export const projectsData = [
     ],
     description:
       "My personal portfolio website to provide professional information about myself, also representation of work i have created, as well as my skills and experiences",
-    image: "/assets/vchkov-portfolio-img.png",
     linkcode: "https://github.com/KonstantinVchkov/web-portfolio.git",
     showLive: "https://vchkov.dev/",
   },
@@ -146,7 +140,6 @@ export const projectsData = [
     ],
     description:
       "Web application for Vesna-Dent, a modern dental office dedicated to providing exceptional patient care through a seamless online experience. This app is still under construction",
-    image: "/assets/vesna-dent.png",
     linkcode: "https://github.com/KonstantinVchkov/vesna-dent.git",
     showLive: "https://vesna-dent.vercel.app/",
   },
@@ -170,7 +163,6 @@ export const projectsData = [
     ],
     description:
       "This is a startup web application using AI services to optimize cv for Application Tracking System (ATS). Working by the scrum methodology, in a team of 8 people. Besides coding, everyday work includes meetings with the whole team, including Designer, Pm, Qa, Technical leader and Peer programming.",
-    image: "/assets/optiCV.png",
     showLive: "https://opticv.net/",
   },
   {
@@ -184,7 +176,6 @@ export const projectsData = [
     ],
     description:
       "As part of my work with Nexiora, I developed an informational web application that highlights the diverse skills and capabilities of the company. This application serves as a testament to Nexiora's commitment to technological excellence and strategic foresight. It exemplifies my ability to create solutions that not only showcase a company's strengths but also align with their innovative vision and operational goals.",
-    image: "/assets/nexiora_frame.png",
     showLive: "https://nexiora.net/",
   },
 ];

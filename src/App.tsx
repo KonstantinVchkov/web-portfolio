@@ -10,6 +10,11 @@ import { animateScroll as scroll } from "react-scroll";
 import ScrollButton from "./components/ScrollBtn/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/footer/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 function App() {
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -22,9 +27,30 @@ function App() {
         <Home />
         <About {...aboutMe} />
         <div id="projects" className="projects">
-          {projectsData.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
-          ))}
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 1,
+              depth: 150,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+          >
+            {projectsData.map((project, idx) => (
+              <SwiperSlide key={idx}>
+                <ProjectCard {...project} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <ScrollButton handleScroll={scrollToTop} />
         <ContactUs />
