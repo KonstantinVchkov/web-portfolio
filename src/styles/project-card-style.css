@@ -1,6 +1,6 @@
 /* General Card Container */
 .project-card {
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
@@ -16,7 +16,7 @@
 
 /* Title Styling */
 .project-card h3 {
-  color: #333;
+  /* color: #333; */
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -37,7 +37,6 @@
 
 /* Description */
 .project-card p {
-  color: #555;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -45,8 +44,8 @@
 
 /* Buttons */
 .project-card a.cta-btn {
-  background-color: #00cdac;
-  color: #fff;
+  /* background-color: #00cdac; */
+  /* color: #fff; */
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -67,13 +66,11 @@
 }
 
 .project-card .tech {
-  background-color: #f0f0f0;
-  color: #333;
   margin: 5px;
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 1px 12px -1px #0000008a;
 }
 
 /* Responsive Adjustments */
