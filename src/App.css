@@ -30,7 +30,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.swiper-wrapper{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.swiper-pagination-bullet-active{
+  background-color: #00b393 !important;
+}
 .App-link {
   color: #61dafb;
 }
