@@ -2,13 +2,16 @@
 .project-card {
   /* background-color: #fff; */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 7px 19px 8px rgb(147 144 144 / 87%);
   margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.project-card-dark{
+  background: radial-gradient(circle at 10% 20%, rgb(97 97 97) 0%, rgb(76 76 76) 90.2%);
+  box-shadow: -5px 7px 19px 8px rgb(147 144 144 / 87%);
+}
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
