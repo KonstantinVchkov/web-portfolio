@@ -6,6 +6,7 @@
   padding: 20px;
   max-width: 600px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height:500px;
 }
 .project-card-dark{
   background: radial-gradient(circle at 10% 20%, rgb(97 97 97) 0%, rgb(76 76 76) 90.2%);
