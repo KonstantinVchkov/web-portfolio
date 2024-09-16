@@ -43,6 +43,7 @@ function App() {
               clickable: true,
             }}
             modules={[EffectCoverflow, Pagination]}
+            height={500}
             className="mySwiper"
           >
             {projectsData.map((project, idx) => (
